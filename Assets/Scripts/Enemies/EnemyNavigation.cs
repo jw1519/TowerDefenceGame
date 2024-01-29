@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,5 +44,11 @@ public class EnemyNavigation : MonoBehaviour
         {
             
         }
+
+        
+    }
+    public void OnTriggerEnter(Collider other)
+    {
+        Health--;
     }
 }
