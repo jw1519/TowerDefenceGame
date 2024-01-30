@@ -3,15 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using System.Text;
+using TMPro;
 
 public class EnemyNavigation : MonoBehaviour
 {
     public GameObject[] paths;
     public NavMeshAgent Enemy;
     public Animator animator;
+
+    public TextMeshProUGUI Gold;
+    public TextMeshProUGUI healthText;
+
+    private int gold = 0;
     private int startingPath = 0;
     private int pathLength = 0;
     public int Health = 100;
+    int isDyingHash;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +27,8 @@ public class EnemyNavigation : MonoBehaviour
         startingPath = 0;
         pathLength = paths.Length;
         Enemy = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
+        isDyingHash = Animator.StringToHash("IsDying");
     }
 
     // Update is called once per frame
@@ -37,6 +47,8 @@ public class EnemyNavigation : MonoBehaviour
                     startingPath++;
                 }
             }
+
+            bool IsDying = animator.GetBool(isDyingHash);
         }
 
         Enemy.SetDestination(paths[startingPath].transform.position);
@@ -44,6 +56,17 @@ public class EnemyNavigation : MonoBehaviour
         {
             
         }
+        if (Health <= 0) 
+        {
+           if (animator != null)
+           {
+                animator.SetBool(isDyingHash, true);
+                gold++;
+                Gold.SetText("Gold: "+ gold);
+                Destroy(gameObject);
+            }
+        }
+        
 
         
     }

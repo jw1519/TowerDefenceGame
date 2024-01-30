@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LazerBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9ed11552cfdad0b47851d77264b19911, type: 3}
+      propertyPath: m_TagString
+      value: projectile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -61,7 +65,7 @@ PrefabInstance:
       addedObject: {fileID: -4982064193711786543}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9ed11552cfdad0b47851d77264b19911, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -5963776765525332257}
+      addedObject: {fileID: 5545467335181032582}
   m_SourcePrefab: {fileID: 100100000, guid: 9ed11552cfdad0b47851d77264b19911, type: 3}
 --- !u!1 &8170788359447719549 stripped
 GameObject:
@@ -91,7 +95,7 @@ CapsuleCollider:
   m_Height: 0.0382036
   m_Direction: 1
   m_Center: {x: 0, y: -0.004778624, z: 0}
---- !u!114 &-5963776765525332257
+--- !u!114 &5545467335181032582
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,7 +104,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 8170788359447719549}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b78a2e2e285f614c835c2ef2babb5ea, type: 3}
+  m_Script: {fileID: 11500000, guid: 44cbc1d8e8ea30c42a591a74902308f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeoutDelay: 3
+  target: {fileID: 0}
+  speed: 10
