@@ -64,12 +64,14 @@ public class Towers : ProjectileObjectPool
         //Vector3 roation = lookRotation.eulerAngles;
         //PartToRotate.rotation = Quaternion.Euler(0f, roation.y, 0f);
 
-        
 
-        if (fireCountdown <= 0f)
+        if (target != null)
         {
-            Shoot();
-            fireCountdown = 1f / fireRate;
+            if (fireCountdown <= 0f)
+            {
+                Shoot();
+                fireCountdown = 1f / fireRate;
+            }
         }
         fireCountdown -= Time.deltaTime;
     }

@@ -132,6 +132,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc153175257404428af8e61f7089d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 0}
+  amountToPool: 10
+  pools: []
   target: {fileID: 0}
   enemyTag: Enemy
   range: 60

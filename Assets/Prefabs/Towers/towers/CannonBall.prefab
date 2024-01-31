@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 5
+  speed: 20
 --- !u!135 &-6044194768278242563
 SphereCollider:
   m_ObjectHideFlags: 0
