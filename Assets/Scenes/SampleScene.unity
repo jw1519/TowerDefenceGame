@@ -19084,7 +19084,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049768647}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f5a2118a93020b4387b51c4a340880f, type: 3}
   m_Name: 
@@ -19115,10 +19115,10 @@ MonoBehaviour:
     amountToPool: 10
   - tag: Arrow
     objectToPool: {fileID: 6876707946873665200, guid: 8f97a1d959d160a4f95a723db4f07f8b, type: 3}
-    amountToPool: 0
+    amountToPool: 10
   - tag: Magic
     objectToPool: {fileID: 8170788359447719549, guid: 9d05ab724d2ec494c896bc3220a4eb15, type: 3}
-    amountToPool: 0
+    amountToPool: 10
 --- !u!1001 &1051703995
 PrefabInstance:
   m_ObjectHideFlags: 0

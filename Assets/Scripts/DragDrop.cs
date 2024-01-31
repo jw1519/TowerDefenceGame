@@ -7,6 +7,7 @@ public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 {
 
     Transform parentAfterDrag;
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("Begin");
