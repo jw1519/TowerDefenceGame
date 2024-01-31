@@ -7,7 +7,6 @@ using TMPro;
 
 public class EnemyNavigation : MonoBehaviour
 {
-    //public GameObject[] paths;
     Vector3 destination;
     public NavMeshAgent Enemy;
     public Animator animator;
@@ -69,9 +68,5 @@ public class EnemyNavigation : MonoBehaviour
         {
             Health = Health - MagicPower;
         }
-
-        
-        
-
     }
 }

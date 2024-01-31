@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - projectile
+  - CannonBall
+  - Arrow
+  - Magic
   layers:
   - Default
   - TransparentFX

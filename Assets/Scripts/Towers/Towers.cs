@@ -79,7 +79,7 @@ public class Towers : ProjectileObjectPool
    
     public void Shoot()
     {
-        //SpawnFromPool("CannonBall", firePoint.position, Quaternion.identity);
+        SpawnFromPool("CannonBall", firePoint.position, Quaternion.identity);
 
         GameObject projectileGO = Instantiate(ProjectilePrefab, firePoint.position, firePoint.rotation);
         projectiles projectiles = projectileGO.GetComponent<projectiles>();
