@@ -314,16 +314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35bc5cd887045ac46b9748269ef228df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paths:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   Enemy: {fileID: 4340035333577336964}
   animator: {fileID: 3406568323332555371}
-  target: {fileID: 0}
+  target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
   Gold: {fileID: 0}
   healthText: {fileID: 0}
   Health: 100

@@ -42,27 +42,9 @@ public class EnemyNavigation : MonoBehaviour
         {
             destination = target.position;
             Enemy.destination = destination;
-            
-            bool IsDying = animator.GetBool(isDyingHash);
         }
+        //bool IsDying = animator.GetBool(isDyingHash);
 
-
-        //if (startingPath < pathLength)
-        //{
-        //    if (Vector3.Distance(paths[startingPath].transform.position, gameObject.transform.position) < 1)
-        //    {
-        //        if (startingPath == pathLength - 1)
-        //        {
-        //            startingPath = 0;
-        //        }
-        //        else
-        //        {
-        //            startingPath++;
-        //        }
-        //    }
-
-        //    bool IsDying = animator.GetBool(isDyingHash);
-        //}
         if (Health <= 0) 
         {
            if (animator != null)
@@ -73,17 +55,6 @@ public class EnemyNavigation : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        
-
-        if (Health <= 0)
-        {
-            if (animator != null)
-            {
-
-            }
-
-        }
-        
     }
     public void OnTriggerEnter(Collider other)
     {
