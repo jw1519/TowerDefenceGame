@@ -18,16 +18,12 @@ public class EnemyNavigation : MonoBehaviour
     public TextMeshProUGUI healthText;
 
     private int gold = 0;
-    private int startingPath = 0;
-    private int pathLength = 0;
     public int Health = 100;
     int isDyingHash;
 
     // Start is called before the first frame update
     void Start()
     {
-        startingPath = 0;
-        //pathLength = paths.Length;
         Enemy = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         isDyingHash = Animator.StringToHash("IsDying");
