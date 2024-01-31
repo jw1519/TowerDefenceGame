@@ -6,7 +6,7 @@ public class WaveSpawner : MonoBehaviour
 {
     public Transform enemyPrefab;
     public float timeBetweenWaves = 5f;
-    private float countdown = 2f;
+    private float countdown = 4f;
     public int WaveNumber = 0;
     public Transform Spawnpoint;
     public Transform Enemy;
@@ -26,7 +26,7 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < WaveNumber; i++)
         {
             SpawnEnemy();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(5f);
         }
         WaveNumber++;
     }

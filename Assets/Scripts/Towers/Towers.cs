@@ -19,6 +19,7 @@ public class Towers : ProjectileObjectPool
     public float range = 100f;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
+    public int Damage = 1;
 
     public Transform firePoint;
     public GameObject ProjectilePrefab;

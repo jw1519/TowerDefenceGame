@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using System.Text;
 using TMPro;
 
 public class EnemyNavigation : MonoBehaviour
@@ -20,6 +19,10 @@ public class EnemyNavigation : MonoBehaviour
     private int gold = 0;
     public int Health = 100;
     int isDyingHash;
+
+    int CannonBallPower = 10;
+    int ArrowPower = 5;
+    int MagicPower = 15;
 
     // Start is called before the first frame update
     void Start()
@@ -52,8 +55,23 @@ public class EnemyNavigation : MonoBehaviour
             }
         }
     }
-    public void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        Health--;
+        if (other.gameObject.CompareTag("CannonBall"))
+        {
+            Health = Health - CannonBallPower;
+        }
+        else if (other.gameObject.CompareTag("Arrow"))
+        {
+            Health = Health - ArrowPower;
+        }
+        else if (other.gameObject.CompareTag("Magic"))
+        {
+            Health = Health - MagicPower;
+        }
+
+        
+        
+
     }
 }
