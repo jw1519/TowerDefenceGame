@@ -33,6 +33,7 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Instantiate(enemyPrefab, Spawnpoint.position, Spawnpoint.rotation);
+
         enemyPrefab.transform.SetParent(Enemy);
     }
     //SpawnFromPool("Enemy", pawnpoint.position, Quaternion.identity);

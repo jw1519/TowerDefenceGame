@@ -118,8 +118,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paths:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Enemy: {fileID: 4739052524393776485}
   animator: {fileID: 943457914877679551}
+  target: {fileID: 0}
+  Gold: {fileID: 0}
+  healthText: {fileID: 0}
   Health: 100
 --- !u!195 &4739052524393776485
 NavMeshAgent:

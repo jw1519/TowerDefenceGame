@@ -9,8 +9,10 @@ using TMPro;
 public class EnemyNavigation : MonoBehaviour
 {
     public GameObject[] paths;
+    Vector3 destination;
     public NavMeshAgent Enemy;
     public Animator animator;
+    public Transform target;
 
     public TextMeshProUGUI Gold;
     public TextMeshProUGUI healthText;
@@ -29,11 +31,20 @@ public class EnemyNavigation : MonoBehaviour
         Enemy = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         isDyingHash = Animator.StringToHash("IsDying");
+
+        destination = Enemy.destination;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Vector3.Distance(destination, target.position) > 1f)
+        {
+            destination = target.position;
+            Enemy.destination = destination;
+        }
+
+
         if (startingPath < pathLength)
         {
             if (Vector3.Distance(paths[startingPath].transform.position, gameObject.transform.position) < 1)

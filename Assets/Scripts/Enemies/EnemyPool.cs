@@ -39,6 +39,7 @@ public class EnemyPool : MonoBehaviour
                 GameObject obj = Instantiate(pool.objectToPool);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
+                
             }
 
             pooledDictionary.Add(pool.tag, objectPool);

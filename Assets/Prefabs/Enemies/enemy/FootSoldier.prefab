@@ -316,8 +316,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paths:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Enemy: {fileID: 4340035333577336964}
   animator: {fileID: 3406568323332555371}
+  target: {fileID: 0}
+  Gold: {fileID: 0}
+  healthText: {fileID: 0}
   Health: 100
 --- !u!136 &-5755532606146288580
 CapsuleCollider:
