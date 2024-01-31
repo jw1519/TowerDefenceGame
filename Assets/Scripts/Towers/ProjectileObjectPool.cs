@@ -26,6 +26,8 @@ public class ProjectileObjectPool : MonoBehaviour
     private void Awake()
     {
         instance = this;
+
+
     }
 
 
@@ -51,14 +53,14 @@ public class ProjectileObjectPool : MonoBehaviour
         }
 
 
-        //pooledObjects = new List<GameObject>();
-        //GameObject tmp;
-        //for (int i = 0; i < amountToPool; i++) //adds to pool then sets them as inactive
-        //{
-        //    tmp = Instantiate(objectToPool);
-        //    tmp.SetActive(false);
-        //    pooledObjects.Add(tmp);
-        //}
+        pooledObjects = new List<GameObject>();
+        GameObject tmp;
+        for (int i = 0; i < amountToPool; i++) //adds to pool then sets them as inactive
+        {
+            tmp = Instantiate(objectToPool);
+            tmp.SetActive(false);
+            pooledObjects.Add(tmp);
+        }
     }
     //spawn
     public GameObject SpawnFromPool (string tag, Vector3 position, Quaternion rotation)
@@ -82,17 +84,17 @@ public class ProjectileObjectPool : MonoBehaviour
 
 
     // allow other scripts to set objects to active
-    //public GameObject GetPooledObject()
-    //{
-    //    for(int i = 0; i < amountToPool;i++)
-    //    {
-    //        if (!pooledObjects[i].activeInHierarchy)
-    //        {
-    //            return pooledObjects[i];
-    //        }
-    //    }
-    //    return null;
-    //}
+    public GameObject GetPooledObject()
+    {
+        for (int i = 0; i < amountToPool; i++)
+        {
+            if (!pooledObjects[i].activeInHierarchy)
+            {
+                return pooledObjects[i];
+            }
+        }
+        return null;
+    }
 
-    
+
 }

@@ -44,7 +44,7 @@ public class EnemyPool : MonoBehaviour
             pooledDictionary.Add(pool.tag, objectPool);
         }
     }
-    public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
+    public GameObject SpawnFromPoolEnemy(string tag, Vector3 position, Quaternion rotation)
     {
         if (pooledDictionary.ContainsKey(tag))
         {
@@ -63,7 +63,7 @@ public class EnemyPool : MonoBehaviour
         return objectToSpawn;
     }
     // allow other scripts to set objects to active
-    public GameObject GetPooledObject()
+    public GameObject GetPooledObjectEnemy()
     {
         for (int i = 0; i < amountToPool; i++)
         {
