@@ -8,7 +8,7 @@ using TMPro;
 
 public class EnemyNavigation : MonoBehaviour
 {
-    public GameObject[] paths;
+    //public GameObject[] paths;
     Vector3 destination;
     public NavMeshAgent Enemy;
     public Animator animator;
@@ -27,7 +27,7 @@ public class EnemyNavigation : MonoBehaviour
     void Start()
     {
         startingPath = 0;
-        pathLength = paths.Length;
+        //pathLength = paths.Length;
         Enemy = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         isDyingHash = Animator.StringToHash("IsDying");
@@ -42,31 +42,27 @@ public class EnemyNavigation : MonoBehaviour
         {
             destination = target.position;
             Enemy.destination = destination;
-        }
-
-
-        if (startingPath < pathLength)
-        {
-            if (Vector3.Distance(paths[startingPath].transform.position, gameObject.transform.position) < 1)
-            {
-                if (startingPath == pathLength - 1)
-                {
-                    startingPath = 0;
-                }
-                else
-                {
-                    startingPath++;
-                }
-            }
-
+            
             bool IsDying = animator.GetBool(isDyingHash);
         }
 
-        Enemy.SetDestination(paths[startingPath].transform.position);
-        if (animator != null)
-        {
-            
-        }
+
+        //if (startingPath < pathLength)
+        //{
+        //    if (Vector3.Distance(paths[startingPath].transform.position, gameObject.transform.position) < 1)
+        //    {
+        //        if (startingPath == pathLength - 1)
+        //        {
+        //            startingPath = 0;
+        //        }
+        //        else
+        //        {
+        //            startingPath++;
+        //        }
+        //    }
+
+        //    bool IsDying = animator.GetBool(isDyingHash);
+        //}
         if (Health <= 0) 
         {
            if (animator != null)
