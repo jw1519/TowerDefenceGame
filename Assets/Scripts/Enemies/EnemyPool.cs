@@ -1,37 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Pool;
 
-public class ProjectileObjectPool : MonoBehaviour
-//creates projectiles efore the game runs https://learn.unity.com/tutorial/introduction-to-object-pooling#
+public class EnemyPool : MonoBehaviour
 {
-    //public static ObjectPool pool;
     public List<GameObject> pooledObjects;
     public GameObject objectToPool;
-    public int amountToPool = 10;
-
-    
+    public int amountToPool = 100;
 
     [System.Serializable]
     public class Pool
     {
         public string tag;
         public GameObject objectToPool;
-        public int amountToPool = 10;
+        public int amountToPool = 100;
     }
-    //singleton
-    public static ProjectileObjectPool instance;
 
+    public static EnemyPool instance;
     private void Awake()
     {
         instance = this;
     }
 
-
     public List<Pool> pools;
     public Dictionary<string, Queue<GameObject>> pooledDictionary;
 
+    // Start is called before the first frame update
     void Start()
     {
         pooledDictionary = new Dictionary<string, Queue<GameObject>>();
@@ -49,19 +43,8 @@ public class ProjectileObjectPool : MonoBehaviour
 
             pooledDictionary.Add(pool.tag, objectPool);
         }
-
-
-        //pooledObjects = new List<GameObject>();
-        //GameObject tmp;
-        //for (int i = 0; i < amountToPool; i++) //adds to pool then sets them as inactive
-        //{
-        //    tmp = Instantiate(objectToPool);
-        //    tmp.SetActive(false);
-        //    pooledObjects.Add(tmp);
-        //}
     }
-    //spawn
-    public GameObject SpawnFromPool (string tag, Vector3 position, Quaternion rotation)
+    public GameObject SpawnFromPool(string tag, Vector3 position, Quaternion rotation)
     {
         if (pooledDictionary.ContainsKey(tag))
         {
@@ -79,20 +62,17 @@ public class ProjectileObjectPool : MonoBehaviour
 
         return objectToSpawn;
     }
-
-
     // allow other scripts to set objects to active
-    //public GameObject GetPooledObject()
-    //{
-    //    for(int i = 0; i < amountToPool;i++)
-    //    {
-    //        if (!pooledObjects[i].activeInHierarchy)
-    //        {
-    //            return pooledObjects[i];
-    //        }
-    //    }
-    //    return null;
-    //}
+    public GameObject GetPooledObject()
+    {
+        for (int i = 0; i < amountToPool; i++)
+        {
+            if (!pooledObjects[i].activeInHierarchy)
+            {
+                return pooledObjects[i];
+            }
+        }
+        return null;
+    }
 
-    
 }

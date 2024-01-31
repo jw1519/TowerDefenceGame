@@ -26,7 +26,7 @@ public class Towers : ProjectileObjectPool
     private void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
-        objectPooler = ProjectileObjectPool.Instance;
+        objectPooler = ProjectileObjectPool.instance;
     }
     
 

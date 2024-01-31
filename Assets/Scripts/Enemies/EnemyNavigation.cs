@@ -45,6 +45,14 @@ public class EnemyNavigation : MonoBehaviour
             
         }
 
+        if (Health <= 0)
+        {
+            if (animator != null)
+            {
+
+            }
+
+        }
         
     }
     public void OnTriggerEnter(Collider other)
