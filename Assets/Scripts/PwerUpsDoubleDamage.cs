@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class PwerUpsDoubleDamage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public void OnButtonPress()
     {
-        
+        Debug.Log("press");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

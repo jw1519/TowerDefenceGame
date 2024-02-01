@@ -7,6 +7,7 @@ public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 {
 
     Transform parentAfterDrag;
+    public GameObject Placeaable;
 
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -26,5 +27,7 @@ public class DragDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     {
         Debug.Log("End");
         transform.SetParent(parentAfterDrag);
+
     }
+
 }
