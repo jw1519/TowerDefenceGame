@@ -119,8 +119,8 @@ MonoBehaviour:
   Enemy: {fileID: 4739052524393776485}
   animator: {fileID: 943457914877679551}
   target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
-  Gold: {fileID: 0}
-  healthText: {fileID: 0}
+  Gold: {fileID: 3803344880040738893, guid: 5f260e6c38323984da64be915645a87b, type: 3}
+  healthText: {fileID: 7106585336699532092, guid: c3a0b81a84062634b9122e56fe341a6e, type: 3}
   Health: 200
 --- !u!195 &4739052524393776485
 NavMeshAgent:
