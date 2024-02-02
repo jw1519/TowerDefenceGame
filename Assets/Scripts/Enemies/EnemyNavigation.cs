@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
+using UnityEngine.UI;
 
 public class EnemyNavigation : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class EnemyNavigation : MonoBehaviour
     {
         Enemy = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        Gold.GetComponent<TextMeshProUGUI>();
+        healthText.GetComponent<TextMeshProUGUI>();
         isDyingHash = Animator.StringToHash("IsDying");
 
         destination = Enemy.destination;

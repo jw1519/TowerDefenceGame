@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-
+using TMPro;
 using UnityEngine;
 
 public class Towers : ProjectileObjectPool
@@ -79,14 +79,14 @@ public class Towers : ProjectileObjectPool
    
     public void Shoot()
     {
-        //SpawnFromPool("CannonBall", firePoint.position, Quaternion.identity);
+        SpawnFromPool("CannonBall", firePoint.position, Quaternion.identity);
 
-        GameObject projectileGO = Instantiate(ProjectilePrefab, firePoint.position, firePoint.rotation);
-        projectiles projectiles = projectileGO.GetComponent<projectiles>();
-        if (projectiles != null)
-        {
-            projectiles.Seek(target);
-        }
+        //GameObject projectileGO = Instantiate(ProjectilePrefab, firePoint.position, firePoint.rotation);
+        //projectiles projectiles = projectileGO.GetComponent<projectiles>();
+        //if (projectiles != null)
+        //{
+        //    projectiles.Seek(target);
+        //}
     }
 
     //creates a radius that is shown when the tower is selected
