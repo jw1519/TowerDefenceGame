@@ -44,18 +44,19 @@ public class EnemyNavigation : MonoBehaviour
             destination = target.position;
             Enemy.destination = destination;
         }
-        //bool IsDying = animator.GetBool(isDyingHash);
+        
 
         if (Health <= 0) 
         {
            if (animator != null)
            {
-                //animator.SetBool(isDyingHash, true);
+                animator.SetBool(isDyingHash, true);
                 gold++;
                 Gold.SetText("Gold: "+ gold);
                 Destroy(gameObject);
             }
         }
+
     }
     private void OnTriggerEnter(Collider other)
     {
