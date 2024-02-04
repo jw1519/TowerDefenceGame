@@ -46,11 +46,12 @@ public class EnemyNavigation : MonoBehaviour
 
         if (Health <= 0) 
         {
-           if (animator != null)
+            gold++;
+            Gold.SetText("Gold: " + gold);
+
+            if (animator != null)
            {
                 animator.SetBool(isDyingHash, true);
-                gold++;
-                Gold.SetText("Gold: "+ gold);
                 Destroy(gameObject);
             }
         }
