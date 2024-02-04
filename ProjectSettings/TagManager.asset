@@ -9,6 +9,7 @@ TagManager:
   - CannonBall
   - Arrow
   - Magic
+  - Destination
   layers:
   - Default
   - TransparentFX

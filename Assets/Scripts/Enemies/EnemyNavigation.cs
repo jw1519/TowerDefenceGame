@@ -14,8 +14,7 @@ public class EnemyNavigation : MonoBehaviour
     public Transform target;
 
     public TextMeshProUGUI Gold;
-    public TextMeshProUGUI healthText;
-
+    
     private int gold = 0;
     public int Health = 100;
     int isDyingHash;
@@ -30,7 +29,6 @@ public class EnemyNavigation : MonoBehaviour
         Enemy = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         Gold.GetComponent<TextMeshProUGUI>();
-        healthText.GetComponent<TextMeshProUGUI>();
         isDyingHash = Animator.StringToHash("IsDying");
 
         destination = Enemy.destination;
