@@ -50,7 +50,7 @@ public class EnemyNavigation : MonoBehaviour
         {
            if (animator != null)
            {
-                animator.SetBool(isDyingHash, true);
+                //animator.SetBool(isDyingHash, true);
                 gold++;
                 Gold.SetText("Gold: "+ gold);
                 Destroy(gameObject);
