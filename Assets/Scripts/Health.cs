@@ -6,7 +6,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public TextMeshProUGUI healthText;
-    public int health = 100;
+    private int health = 100;
     public Transform target;
    
 
@@ -23,7 +23,7 @@ public class Health : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Destimation"))
+        if (other.gameObject.CompareTag("Destination"))
         {
             health = health - 1;
             healthText.SetText("Health: " +  health);
