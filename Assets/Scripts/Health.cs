@@ -16,11 +16,6 @@ public class Health : MonoBehaviour
         healthText.GetComponent<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Destination"))

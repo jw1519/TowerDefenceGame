@@ -57,7 +57,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b4fd3e701bc2d94d9225f2c496a8ba1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -42.432377
+      value: -42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b4fd3e701bc2d94d9225f2c496a8ba1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -127,10 +127,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc153175257404428af8e61f7089d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 0}
+  amountToPool: 10
+  pools: []
   target: {fileID: 0}
   enemyTag: Enemy
   range: 40
   fireRate: 2
+  Damage: 1
   firePoint: {fileID: 5269943160761478159}
   ProjectilePrefab: {fileID: 8170788359447719549, guid: 9d05ab724d2ec494c896bc3220a4eb15, type: 3}
 --- !u!4 &6410509751063558725 stripped
