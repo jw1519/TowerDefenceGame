@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4558213663223262770}
   m_Layer: 0
   m_Name: Grass
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,4 +119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.19277322, g: 0.7169812, b: 0.19977528, a: 0}
-  positionOffSet: {x: 0, y: 0, z: 0}
+  ArcherTowerOffSet: {x: 0, y: 0, z: 0}
+  cannonTowerOffSet: {x: 0, y: 0, z: 0}
+  magicTowerOffSet: {x: 0, y: 0, z: 0}

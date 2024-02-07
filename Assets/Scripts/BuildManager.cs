@@ -14,15 +14,30 @@ public class BuildManager : MonoBehaviour
     }
 
     private GameObject towerToBuild;
-    public GameObject standardTowerPrefab;
+    public GameObject archerTower;
+    public GameObject cannonTower;
+    public GameObject magicTower;
+
+
     private void Start()
     {
-        towerToBuild = standardTowerPrefab;
+        towerToBuild = archerTower;
     }
     public GameObject GetTowerToBuild()
     {
         return towerToBuild;
     }
-
+    public void GetArcherTower()
+    {
+        towerToBuild = archerTower;
+    }
+    public void GetCannonTower()
+    {
+        towerToBuild = cannonTower;
+    }
+    public void GetMagicTower()
+    {
+        towerToBuild = magicTower;
+    }
 
 }

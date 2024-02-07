@@ -350,7 +350,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 554036002}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -2243,9 +2243,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 554036003}
-        m_TargetAssemblyTypeName: TowerInput, Assembly-CSharp
-        m_MethodName: ClickCannonTowerButton
+      - m_Target: {fileID: 1049768651}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: GetCannonTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4860,9 +4860,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 554036003}
-        m_TargetAssemblyTypeName: TowerInput, Assembly-CSharp
-        m_MethodName: ClickMagicTowerButton
+      - m_Target: {fileID: 1049768651}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: GetMagicTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5223,52 +5223,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4230718672980271272, guid: 86f64ddee9266354aaba8d4e52b17924, type: 3}
   m_PrefabInstance: {fileID: 543121486}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &554036002
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 554036004}
-  - component: {fileID: 554036003}
-  m_Layer: 0
-  m_Name: TowerManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &554036003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554036002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e89e01758d705e84cbc3f63868b0edf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 0}
-  rigidbody: {fileID: 0}
---- !u!4 &554036004
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 554036002}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.808214, y: 134.16695, z: -133.34692}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &559170445
 GameObject:
   m_ObjectHideFlags: 0
@@ -8646,7 +8600,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de2a9583ab109f4890512dcb41354f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  standardTowerPrefab: {fileID: 3077624602755273799, guid: f9a40eb8ccdcbbe4aa2cf685961a03e9, type: 3}
+  archerTower: {fileID: 3077624602755273799, guid: f9a40eb8ccdcbbe4aa2cf685961a03e9, type: 3}
+  cannonTower: {fileID: 3680463821713200747, guid: d2ea690f67a7e3a41936d1e980faff3b, type: 3}
+  magicTower: {fileID: 6034089078044123391, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
 --- !u!1001 &1054927335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12101,13 +12057,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TowerInput, Assembly-CSharp
-        m_MethodName: SetTowerToPlace
-        m_Mode: 2
+      - m_Target: {fileID: 1049768651}
+        m_TargetAssemblyTypeName: BuildManager, Assembly-CSharp
+        m_MethodName: GetArcherTower
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 3077624602755273799, guid: f9a40eb8ccdcbbe4aa2cf685961a03e9, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -17859,7 +17815,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1049768648}
-  - {fileID: 554036004}
   - {fileID: 1911922987}
   - {fileID: 951147715}
   - {fileID: 1852486819}

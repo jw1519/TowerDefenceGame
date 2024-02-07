@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlacementManager : MonoBehaviour
 {
     public Color hoverColor;
-    public Vector3 positionOffSet;
+    public Vector3 ArcherTowerOffSet;
+    public Vector3 cannonTowerOffSet;
+    public Vector3 magicTowerOffSet;
 
-    private GameObject archerTower;
+    private GameObject tower;
 
     private Renderer rend;
     private Color startColor;
@@ -19,16 +22,20 @@ public class PlacementManager : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (archerTower != null)
+
+        if (tower != null)// stops towers on towers
         {
             Debug.Log("Cant build there!");
             return;
         }
 
         //build tower
-        GameObject towerToBuild = BuildManager.instance.GetTowerToBuild();
-        archerTower = (GameObject)Instantiate(towerToBuild, transform.position + positionOffSet, transform.rotation);
+        GameObject archerTower = BuildManager.instance.GetTowerToBuild();
+        tower = (GameObject)Instantiate(archerTower, transform.position + ArcherTowerOffSet, transform.rotation);
     }
+
+
+    // when hoving over a tile
     void OnMouseEnter()
     {
         rend.material.color = hoverColor;
