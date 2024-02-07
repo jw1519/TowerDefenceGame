@@ -30,18 +30,18 @@ public class PlacementManager : MonoBehaviour
         }
         GameObject archerTower = BuildManager.instance.GetTowerToBuild();
         //build tower
-        if (tower.CompareTag(""))
-        {
+        //if (tower.CompareTag(""))
+        //{
 
-        }
-        if (tower.CompareTag(""))
-        {
+        //}
+        //if (tower.CompareTag(""))
+        //{
 
-        }
-        if (tower.CompareTag(""))
-        {
+        //}
+        //if (tower.CompareTag(""))
+        //{
 
-        }
+        //}
 
         tower = (GameObject)Instantiate(archerTower, transform.position + ArcherTowerOffSet, transform.rotation);
     }
