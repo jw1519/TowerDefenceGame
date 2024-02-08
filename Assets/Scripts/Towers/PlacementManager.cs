@@ -21,7 +21,7 @@ public class PlacementManager : MonoBehaviour
     private void OnMouseDown()
     {
 
-        if (tower != null)// stops towers on towers
+        if (tower != null)// stops towers on towers add upgrades appear instead
         {
             Debug.Log("Cant build there!");
             return;
@@ -44,7 +44,6 @@ public class PlacementManager : MonoBehaviour
         tower = (GameObject)Instantiate(archerTower, transform.position + TowerOffset, transform.rotation);
     }
 
-
     // when hoving over a tile
     void OnMouseEnter()
     {
@@ -54,5 +53,4 @@ public class PlacementManager : MonoBehaviour
     {
         rend.material.color = startColor;
     }
-
 }

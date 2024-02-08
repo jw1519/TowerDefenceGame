@@ -23,5 +23,10 @@ public class Health : MonoBehaviour
             health = health - 1;
             healthText.SetText("Health: " +  health);
         }
+        if (health <= 0)
+        {
+            health = 0;
+            Debug.Log("Lost!");
+        }
     }
 }
