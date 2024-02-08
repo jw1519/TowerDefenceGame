@@ -71,5 +71,9 @@ public class EnemyNavigation : MonoBehaviour
         {
             Health = Health - MagicPower;
         }
+        else if (other.gameObject.CompareTag("Destination"))
+        {
+            Destroy(gameObject);
+        }
     }
 }
