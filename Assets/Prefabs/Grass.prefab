@@ -119,6 +119,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.19277322, g: 0.7169812, b: 0.19977528, a: 0}
-  ArcherTowerOffSet: {x: 0, y: 0, z: 0}
-  cannonTowerOffSet: {x: 0, y: 0, z: 0}
-  magicTowerOffSet: {x: 0, y: 0, z: 0}
+  ArcherTowerOffSet: {x: 0, y: 6, z: 0}
+  cannonTowerOffSet: {x: 0, y: 6, z: 0}
+  magicTowerOffSet: {x: 0, y: 6, z: 0}

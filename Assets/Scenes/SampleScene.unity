@@ -18265,17 +18265,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 544908068034085518, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
+      propertyPath: m_Size.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 544908068034085518, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 544908068034085518, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
+      propertyPath: m_Size.z
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 106.72
       objectReference: {fileID: 0}
     - target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 19.13
+      value: 17.25
       objectReference: {fileID: 0}
     - target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 178.3
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
       propertyPath: m_LocalRotation.w

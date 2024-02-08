@@ -6,9 +6,7 @@ using UnityEngine;
 public class PlacementManager : MonoBehaviour
 {
     public Color hoverColor;
-    public Vector3 ArcherTowerOffSet;
-    public Vector3 cannonTowerOffSet;
-    public Vector3 magicTowerOffSet;
+    public Vector3 TowerOffset;
 
     private GameObject tower;
 
@@ -43,7 +41,7 @@ public class PlacementManager : MonoBehaviour
 
         //}
 
-        tower = (GameObject)Instantiate(archerTower, transform.position + ArcherTowerOffSet, transform.rotation);
+        tower = (GameObject)Instantiate(archerTower, transform.position + TowerOffset, transform.rotation);
     }
 
 
