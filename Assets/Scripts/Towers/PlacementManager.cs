@@ -26,20 +26,9 @@ public class PlacementManager : MonoBehaviour
             Debug.Log("Cant build there!");
             return;
         }
+
         GameObject archerTower = BuildManager.instance.GetTowerToBuild();
-        //build tower
-        //if (tower.CompareTag(""))
-        //{
 
-        //}
-        //if (tower.CompareTag(""))
-        //{
-
-        //}
-        //if (tower.CompareTag(""))
-        //{
-
-        //}
 
         tower = (GameObject)Instantiate(archerTower, transform.position + TowerOffset, transform.rotation);
     }

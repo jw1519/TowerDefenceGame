@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PwerUpsDoubleDamage : MonoBehaviour
+public class PowerUps : MonoBehaviour
 {
 
-    public void OnButtonPress()
+    public void OnDoubleDamageButtonPress()
     {
         Debug.Log("press");
     }
+    public void OnFreezeBottonPressed()
+    {
 
+    }
 }
