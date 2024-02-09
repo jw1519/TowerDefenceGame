@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Pool;
 
 public class ProjectileObjectPool : MonoBehaviour
-//creates projectiles efore the game runs https://learn.unity.com/tutorial/introduction-to-object-pooling#
+//creates projectiles efore the game runs 
 {
     //public static ObjectPool pool;
     public List<GameObject> pooledObjects;
