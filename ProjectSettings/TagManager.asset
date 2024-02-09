@@ -10,6 +10,7 @@ TagManager:
   - Magic
   - Destination
   - floor
+  - Terrain
   layers:
   - Default
   - TransparentFX

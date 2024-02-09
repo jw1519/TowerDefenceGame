@@ -265,10 +265,10 @@ PrefabInstance:
       addedObject: {fileID: 4340035333577336964}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 57188ed5868f11c4fa96b46c325d0d2d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1326957497063378610}
+      addedObject: {fileID: -5755532606146288580}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 57188ed5868f11c4fa96b46c325d0d2d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -5755532606146288580}
+      addedObject: {fileID: 1326957497063378610}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 57188ed5868f11c4fa96b46c325d0d2d, type: 3}
       insertIndex: -1
       addedObject: {fileID: -1344475869321188563}
@@ -305,23 +305,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1326957497063378610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8281402486344401579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35bc5cd887045ac46b9748269ef228df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemy: {fileID: 4340035333577336964}
-  animator: {fileID: 3406568323332555371}
-  target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
-  Gold: {fileID: 3803344880040738893, guid: 5f260e6c38323984da64be915645a87b, type: 3}
-  Health: 100
 --- !u!136 &-5755532606146288580
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -345,6 +328,23 @@ CapsuleCollider:
   m_Height: 6
   m_Direction: 1
   m_Center: {x: 0, y: 2.7, z: 0}
+--- !u!114 &1326957497063378610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8281402486344401579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35bc5cd887045ac46b9748269ef228df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemy: {fileID: 4340035333577336964}
+  animator: {fileID: 3406568323332555371}
+  target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
+  Gold: {fileID: 3803344880040738893, guid: 5f260e6c38323984da64be915645a87b, type: 3}
+  Health: 100
 --- !u!114 &-1344475869321188563
 MonoBehaviour:
   m_ObjectHideFlags: 0

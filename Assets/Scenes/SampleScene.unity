@@ -1751,6 +1751,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4230718672980271272, guid: 86f64ddee9266354aaba8d4e52b17924, type: 3}
   m_PrefabInstance: {fileID: 153055683}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &154324863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 154324865}
+  - component: {fileID: 154324864}
+  m_Layer: 0
+  m_Name: PowerUpManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &154324864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154324863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6af580b560c6f47b0d3881caac4d3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &154324865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154324863}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -576.2177, y: -2112.4165, z: 4081.2202}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &162764082
 Mesh:
   m_ObjectHideFlags: 0
@@ -2583,7 +2627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3847192229243861515, guid: 660438946225a2f42a92a9521486d508, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: UI
       objectReference: {fileID: 0}
     - target: {fileID: 4856661957968266169, guid: 660438946225a2f42a92a9521486d508, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -11457,6 +11501,14 @@ PrefabInstance:
     - target: {fileID: 2034368113509762384, guid: e452aac5742a8a1458a6253599ccff45, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 154324864}
+    - target: {fileID: 2034368113509762384, guid: e452aac5742a8a1458a6253599ccff45, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnFreezeBottonPressed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2034368113509762384, guid: e452aac5742a8a1458a6253599ccff45, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PowerUps, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2224173473324203065, guid: e452aac5742a8a1458a6253599ccff45, type: 3}
       propertyPath: m_AnchorMax.x
@@ -11505,14 +11557,14 @@ PrefabInstance:
     - target: {fileID: 3674640856730864843, guid: e452aac5742a8a1458a6253599ccff45, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 154324864}
     - target: {fileID: 3674640856730864843, guid: e452aac5742a8a1458a6253599ccff45, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnButtonPress
+      value: OnDoubleDamageButtonPress
       objectReference: {fileID: 0}
     - target: {fileID: 3674640856730864843, guid: e452aac5742a8a1458a6253599ccff45, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PwerUpsDoubleDamage, Assembly-CSharp
+      value: PowerUps, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3674640856730864843, guid: e452aac5742a8a1458a6253599ccff45, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -18343,3 +18395,4 @@ SceneRoots:
   - {fileID: 298057342}
   - {fileID: 1633091099}
   - {fileID: 497134446}
+  - {fileID: 154324865}
