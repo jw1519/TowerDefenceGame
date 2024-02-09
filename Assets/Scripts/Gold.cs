@@ -9,6 +9,8 @@ public class Gold : MonoBehaviour
     public int health;
     private int GoldAmount;
 
+    
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,10 +21,6 @@ public class Gold : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health <= 0)
-        {
-            GoldAmount = GoldAmount + 10;
-            goldText.SetText("Gold: " + GoldAmount);
-        }
+
     }
 }

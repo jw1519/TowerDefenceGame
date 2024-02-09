@@ -33,6 +33,7 @@ public class PlacementManager : MonoBehaviour
         tower = (GameObject)Instantiate(archerTower, transform.position + TowerOffset, transform.rotation);
     }
 
+
     // when hoving over a tile
     void OnMouseEnter()
     {

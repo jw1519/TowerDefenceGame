@@ -8,6 +8,19 @@ using UnityEngine.UI;
 
 public class EnemyNavigation : MonoBehaviour
 {
+    public static EnemyNavigation instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+            Debug.LogError("more than one gamemanager");
+
+        instance = this;
+    }
+
+
+
+
     Vector3 destination;
     public NavMeshAgent Enemy;
     public Animator animator;
@@ -41,20 +54,9 @@ public class EnemyNavigation : MonoBehaviour
         {
             destination = target.position;
             Enemy.destination = destination;
+           
         }
-        
-
-        if (Health <= 0) 
-        {
-            gold++;
-            Gold.SetText("Gold: " + gold);
-
-            if (animator != null)
-           {
-                animator.SetBool(isDyingHash, true);
-                Destroy(gameObject);
-            }
-        }
+        IncreaseGold();
 
     }
     private void OnTriggerEnter(Collider other)
@@ -74,6 +76,20 @@ public class EnemyNavigation : MonoBehaviour
         else if (other.gameObject.CompareTag("Destination"))
         {
             Destroy(gameObject);
+        }
+    }
+    public void IncreaseGold()
+    {
+        if (Health <= 0)
+        {
+            gold++;
+            Gold.SetText("Gold: " + gold);
+
+            if (animator != null)
+            {
+                animator.SetBool(isDyingHash, true);
+                Destroy(gameObject);
+            }
         }
     }
 }
