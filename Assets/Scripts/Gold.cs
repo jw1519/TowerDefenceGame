@@ -6,8 +6,9 @@ using UnityEngine;
 public class Gold : MonoBehaviour
 {
     public TextMeshProUGUI goldText;
-    public int health;
     private int GoldAmount;
+
+    public EnemyNavigation health;
 
     
 

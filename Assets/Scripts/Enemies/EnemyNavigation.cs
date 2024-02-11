@@ -29,7 +29,7 @@ public class EnemyNavigation : MonoBehaviour
     public TextMeshProUGUI Gold;
     
     private int gold = 0;
-    public int Health = 100;
+    public int health = 100;
     int isDyingHash;
 
     int CannonBallPower = 10;
@@ -63,15 +63,15 @@ public class EnemyNavigation : MonoBehaviour
     {
         if (other.gameObject.CompareTag("CannonBall"))
         {
-            Health = Health - CannonBallPower;
+            health = health - CannonBallPower;
         }
         else if (other.gameObject.CompareTag("Arrow"))
         {
-            Health = Health - ArrowPower;
+            health = health - ArrowPower;
         }
         else if (other.gameObject.CompareTag("Magic"))
         {
-            Health = Health - MagicPower;
+            health = health - MagicPower;
         }
         else if (other.gameObject.CompareTag("Destination"))
         {
@@ -80,7 +80,7 @@ public class EnemyNavigation : MonoBehaviour
     }
     public void IncreaseGold()
     {
-        if (Health <= 0)
+        if (health <= 0)
         {
             gold++;
             Gold.SetText("Gold: " + gold);
