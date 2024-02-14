@@ -26,8 +26,6 @@ public class ProjectileObjectPool : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
-
     }
 
 

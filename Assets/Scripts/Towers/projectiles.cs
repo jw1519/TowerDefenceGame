@@ -40,8 +40,8 @@ public class projectiles : MonoBehaviour
     //unactivates when hit enemy
     private void HitTarget()
     {
-        //gameObject.SetActive(false);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
 
     }
      

@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyPool : MonoBehaviour
 {
     public List<GameObject> pooledObjects;
-    public GameObject objectToPool;
     public int amountToPool = 100;
 
     [System.Serializable]

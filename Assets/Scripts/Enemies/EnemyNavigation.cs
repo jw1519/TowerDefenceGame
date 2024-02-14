@@ -75,7 +75,8 @@ public class EnemyNavigation : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Destination"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
     }
     public void IncreaseGold()
@@ -88,7 +89,8 @@ public class EnemyNavigation : MonoBehaviour
             if (animator != null)
             {
                 animator.SetBool(isDyingHash, true);
-                Destroy(gameObject);
+                gameObject.SetActive(false);
+                //Destroy(gameObject);
             }
         }
     }

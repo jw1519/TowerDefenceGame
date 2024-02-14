@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Towers : ProjectileObjectPool
+public class Towers : MonoBehaviour
 {
 
     public Transform target;
-    ProjectileObjectPool objectPooler;
+    
 
     //public Transform PartToRotate;
 
@@ -27,7 +27,7 @@ public class Towers : ProjectileObjectPool
     private void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
-        objectPooler = ProjectileObjectPool.instance;
+        
     }
     
 
@@ -79,7 +79,7 @@ public class Towers : ProjectileObjectPool
    
     public void Shoot()
     {
-        //SpawnFromPool("CannonBall", firePoint.position, Quaternion.identity);
+        ProjectileObjectPool.instance.SpawnFromPool("CannonBall", firePoint.position, Quaternion.identity);
 
         GameObject projectileGO = Instantiate(ProjectilePrefab, firePoint.position, firePoint.rotation);
         projectiles projectiles = projectileGO.GetComponent<projectiles>();
