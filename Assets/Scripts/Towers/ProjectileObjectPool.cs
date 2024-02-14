@@ -65,19 +65,23 @@ public class ProjectileObjectPool : MonoBehaviour
     {
         if (pooledDictionary.ContainsKey(tag))
         {
+            GameObject objectToSpawn = pooledDictionary[tag].Dequeue();
+            objectToSpawn.SetActive(true);
+
+            objectToSpawn.transform.position = position;
+            objectToSpawn.transform.rotation = rotation;
+
+            pooledDictionary[tag].Enqueue(objectToSpawn);
+
+            return objectToSpawn;
+            
+        }
+        else
+        {
             Debug.Log("Pool doesnt excist " + tag);
             return null;
         }
-
-        GameObject objectToSpawn = pooledDictionary[tag].Dequeue();
-        objectToSpawn.SetActive(true);
-
-        objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
-
-        pooledDictionary[tag].Enqueue(objectToSpawn);
-
-        return objectToSpawn;
+        
     }
 
 

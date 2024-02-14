@@ -31,7 +31,6 @@ public class projectiles : MonoBehaviour
         {
             HitTarget();
             return;
-
         }
 
         transform.Translate(direction.normalized * distanceThisFrame, Space.World);

@@ -33,9 +33,12 @@ public class WaveSpawner : MonoBehaviour
     void SpawnEnemy()
     {
         //Instantiate(enemyPrefab, Spawnpoint.position, Spawnpoint.rotation);
-        EnemyPool.instance.SpawnFromPoolEnemy("Enemy", Spawnpoint.position, Quaternion.identity);
-        //enemyPrefab.transform.SetParent(Enemy);
-        
+        GameObject spawnedEnemy = EnemyPool.instance.SpawnFromPoolEnemy("Enemy", Spawnpoint.position, Quaternion.identity);
+        spawnedEnemy.transform.SetParent(Enemy);
+        if (spawnedEnemy != null)
+        {
+            spawnedEnemy.SetActive(true);
+        }
     }
 
 }

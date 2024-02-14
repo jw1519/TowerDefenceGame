@@ -28,10 +28,12 @@ public class EnemyPool : MonoBehaviour
     void Start()
     {
         pooledDictionary = new Dictionary<string, Queue<GameObject>>();
+        
+        Queue<GameObject> objectPool = new Queue<GameObject>();
 
         foreach (Pool pool in pools)
         {
-            Queue<GameObject> objectPool = new Queue<GameObject>();
+            
 
             for (int i = 0; i < pool.amountToPool; i++)
             {
@@ -48,11 +50,7 @@ public class EnemyPool : MonoBehaviour
     {
         if (pooledDictionary.ContainsKey(tag))
         {
-            Debug.Log("Pool doesnt excist " + tag);
-            return null;
-        }
-
-        GameObject objectToSpawn = pooledDictionary[tag].Dequeue();
+            GameObject objectToSpawn = pooledDictionary[tag].Dequeue();
         objectToSpawn.SetActive(true);
 
         objectToSpawn.transform.position = position;
@@ -61,6 +59,15 @@ public class EnemyPool : MonoBehaviour
         pooledDictionary[tag].Enqueue(objectToSpawn);
 
         return objectToSpawn;
+            
+        }
+        else
+        {
+            Debug.Log("Pool doesnt excist " + tag);
+            return null;
+        }
+
+        
     }
     // allow other scripts to set objects to active
     public GameObject GetPooledObjectEnemy()

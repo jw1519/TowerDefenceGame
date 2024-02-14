@@ -11,4 +11,8 @@ public class ButtonManager : MonoBehaviour
         towerPannel.SetActive(true);
         upgradesPannel.SetActive(false);
     }
+    public void SellTower()
+    {
+
+    }
 }

@@ -8902,6 +8902,7 @@ GameObject:
   - component: {fileID: 1049768650}
   - component: {fileID: 1049768651}
   - component: {fileID: 1049768652}
+  - component: {fileID: 1049768653}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8957,11 +8958,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pooledObjects: []
   objectToPool: {fileID: 2312312234435305430, guid: 19625dde17cae5747abddd5ab9d3d050, type: 3}
-  amountToPool: 10
+  amountToPool: 1
   pools:
   - tag: CannonBall
     objectToPool: {fileID: 2312312234435305430, guid: 19625dde17cae5747abddd5ab9d3d050, type: 3}
-    amountToPool: 10
+    amountToPool: 100
   - tag: Arrow
     objectToPool: {fileID: 6876707946873665200, guid: 8f97a1d959d160a4f95a723db4f07f8b, type: 3}
     amountToPool: 10
@@ -8997,6 +8998,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradesPannel: {fileID: 58392003}
   towerPannel: {fileID: 510756644}
+--- !u!114 &1049768653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049768647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9bf1f04ef391644a9fb1c50fc48150, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  amountToPool: 1
+  pools:
+  - tag: Enemy
+    objectToPool: {fileID: 8281402486344401579, guid: 83d9b449885654f4ebf518d32697183a, type: 3}
+    amountToPool: 10
+  - tag: Knight
+    objectToPool: {fileID: 5817570455017297791, guid: 13aa4950f54b1dc4bbb5fe896a3b4731, type: 3}
+    amountToPool: 1
+  - tag: Dragon
+    objectToPool: {fileID: 7454279467243001119, guid: 405128f22b859534eb6964c671d32124, type: 3}
+    amountToPool: 1
 --- !u!1001 &1054927335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19303,6 +19328,14 @@ PrefabInstance:
       propertyPath: m_Size.z
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 544908068034085518, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 544908068034085518, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 106.72
@@ -19367,6 +19400,18 @@ PrefabInstance:
     - target: {fileID: 1714206603278299626, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497910684898407060, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1049768652}
+    - target: {fileID: 2497910684898407060, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SellTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 2497910684898407060, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ButtonManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2720717553407452936, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
       propertyPath: m_AnchorMax.y
