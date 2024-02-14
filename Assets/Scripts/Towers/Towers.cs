@@ -102,7 +102,7 @@ public class Towers : MonoBehaviour
         {
             GameObject projectileGO = ProjectileObjectPool.instance.SpawnFromPool("Arrow", firePoint.position, Quaternion.identity);
             projectiles projectiles = projectileGO.GetComponent<projectiles>();
-            projectileGO.transform.rotation = rotation;
+            projectileGO.transform.rotation = rotation;// rotation of projectiles faces the enemies
             projectileGO.transform.localEulerAngles = new Vector3(projectileGO.transform.localEulerAngles.x,
                                                                   projectileGO.transform.localEulerAngles.y,
                                                                   projectileGO.transform.localEulerAngles.z);
@@ -115,7 +115,7 @@ public class Towers : MonoBehaviour
         {
             GameObject projectileGO = ProjectileObjectPool.instance.SpawnFromPool("Magic", firePoint.position, Quaternion.identity);
             projectiles projectiles = projectileGO.GetComponent<projectiles>();
-            projectileGO.transform.rotation = rotation;
+            projectileGO.transform.rotation = rotation; // rotation of projectiles faces the enemies
             projectileGO.transform.localEulerAngles = new Vector3(projectileGO.transform.localEulerAngles.x +90f,
                                                                   projectileGO.transform.localEulerAngles.y,
                                                                   projectileGO.transform.localEulerAngles.z);
