@@ -7,6 +7,8 @@ public class PlacementManager : MonoBehaviour
 {
     public Color hoverColor;
     public Vector3 TowerOffset;
+    public GameObject upgradesPannel;
+    public GameObject towerPannel;
 
     private GameObject tower;
 
@@ -23,10 +25,12 @@ public class PlacementManager : MonoBehaviour
 
         if (tower != null)// stops towers on towers add upgrades appear instead
         {
+            towerPannel.SetActive(false);
+            upgradesPannel.SetActive(true);
             Debug.Log("Cant build there!");
             return;
         }
-
+        
         GameObject archerTower = BuildManager.instance.GetTowerToBuild();
 
 
