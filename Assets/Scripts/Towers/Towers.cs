@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Towers : MonoBehaviour
@@ -56,6 +57,9 @@ public class Towers : MonoBehaviour
         {
             target = null;
         }
+        
+        
+
     }
     private void Update()
     {
@@ -75,14 +79,20 @@ public class Towers : MonoBehaviour
             }
         }
         fireCountdown -= Time.deltaTime;
+
+
     }
    
     public void Shoot()
     {
+        Vector3 distance = (target.transform.position - firePoint.position).normalized;
+        Quaternion rotation = Quaternion.LookRotation(distance);
+
         if (CompareTag("CannonTower"))
         {
             GameObject projectileGO = ProjectileObjectPool.instance.SpawnFromPool("CannonBall", firePoint.position, Quaternion.identity);
             projectiles projectiles = projectileGO.GetComponent<projectiles>();
+            
             if (projectiles != null)
             {
                 projectiles.Seek(target);
@@ -92,6 +102,10 @@ public class Towers : MonoBehaviour
         {
             GameObject projectileGO = ProjectileObjectPool.instance.SpawnFromPool("Arrow", firePoint.position, Quaternion.identity);
             projectiles projectiles = projectileGO.GetComponent<projectiles>();
+            projectileGO.transform.rotation = rotation;
+            projectileGO.transform.localEulerAngles = new Vector3(projectileGO.transform.localEulerAngles.x,
+                                                                  projectileGO.transform.localEulerAngles.y,
+                                                                  projectileGO.transform.localEulerAngles.z);
             if (projectiles != null)
             {
                 projectiles.Seek(target);
@@ -101,6 +115,10 @@ public class Towers : MonoBehaviour
         {
             GameObject projectileGO = ProjectileObjectPool.instance.SpawnFromPool("Magic", firePoint.position, Quaternion.identity);
             projectiles projectiles = projectileGO.GetComponent<projectiles>();
+            projectileGO.transform.rotation = rotation;
+            projectileGO.transform.localEulerAngles = new Vector3(projectileGO.transform.localEulerAngles.x +90f,
+                                                                  projectileGO.transform.localEulerAngles.y,
+                                                                  projectileGO.transform.localEulerAngles.z);
             if (projectiles != null)
             {
                 projectiles.Seek(target);
