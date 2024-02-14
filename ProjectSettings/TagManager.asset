@@ -11,6 +11,9 @@ TagManager:
   - Destination
   - floor
   - Terrain
+  - CannonTower
+  - ArcherTower
+  - MagicTower
   layers:
   - Default
   - TransparentFX

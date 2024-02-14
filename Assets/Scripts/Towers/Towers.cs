@@ -79,14 +79,34 @@ public class Towers : MonoBehaviour
    
     public void Shoot()
     {
-        ProjectileObjectPool.instance.SpawnFromPool("CannonBall", firePoint.position, Quaternion.identity);
-
-        GameObject projectileGO = Instantiate(ProjectilePrefab, firePoint.position, firePoint.rotation);
-        projectiles projectiles = projectileGO.GetComponent<projectiles>();
-        if (projectiles != null)
+        if (CompareTag("CannonTower"))
         {
-            projectiles.Seek(target);
+            GameObject projectileGO = ProjectileObjectPool.instance.SpawnFromPool("CannonBall", firePoint.position, Quaternion.identity);
+            projectiles projectiles = projectileGO.GetComponent<projectiles>();
+            if (projectiles != null)
+            {
+                projectiles.Seek(target);
+            }
         }
+        if (CompareTag("ArcherTower"))
+        {
+            GameObject projectileGO = ProjectileObjectPool.instance.SpawnFromPool("Arrow", firePoint.position, Quaternion.identity);
+            projectiles projectiles = projectileGO.GetComponent<projectiles>();
+            if (projectiles != null)
+            {
+                projectiles.Seek(target);
+            }
+        }
+        if (this.CompareTag("MagicTower"))
+        {
+            GameObject projectileGO = ProjectileObjectPool.instance.SpawnFromPool("Magic", firePoint.position, Quaternion.identity);
+            projectiles projectiles = projectileGO.GetComponent<projectiles>();
+            if (projectiles != null)
+            {
+                projectiles.Seek(target);
+            }
+        }
+
     }
 
     //creates a radius that is shown when the tower is selected

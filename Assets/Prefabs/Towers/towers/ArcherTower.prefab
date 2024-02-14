@@ -93,11 +93,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0c34666a499fd0d4e84f2e44eb0c3f8f, type: 3}
       propertyPath: m_Name
-      value: _archer_tower_LVL_3
+      value: ArcherTower
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0c34666a499fd0d4e84f2e44eb0c3f8f, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c34666a499fd0d4e84f2e44eb0c3f8f, type: 3}
+      propertyPath: m_TagString
+      value: ArcherTower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -132,10 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fc153175257404428af8e61f7089d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pooledObjects: []
-  objectToPool: {fileID: 0}
-  amountToPool: 10
-  pools: []
   target: {fileID: 0}
   enemyTag: Enemy
   range: 60
