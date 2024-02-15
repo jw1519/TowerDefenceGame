@@ -6,17 +6,18 @@ using UnityEngine;
 public class Gold : MonoBehaviour
 {
     public TextMeshProUGUI goldText;
-    private int GoldAmount;
+    public static Gold instance;
 
-    public EnemyNavigation health;
-
-    
+    void Awake()
+    {
+        instance = this;
+    }
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        EnemyNavigation.instance.IncreaseGold();
     }
 
     // Update is called once per frame

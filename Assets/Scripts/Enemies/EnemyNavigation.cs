@@ -56,7 +56,11 @@ public class EnemyNavigation : MonoBehaviour
             Enemy.destination = destination;
            
         }
-        IncreaseGold();
+        if (health <= 0)
+            IncreaseGold();
+
+
+
 
     }
     private void OnTriggerEnter(Collider other)
@@ -81,17 +85,15 @@ public class EnemyNavigation : MonoBehaviour
     }
     public void IncreaseGold()
     {
-        if (health <= 0)
-        {
-            gold++;
-            Gold.SetText("Gold: " + gold);
+        
+        gold = gold +10;
+        Gold.SetText("Gold: " + gold); // not working as every enemy has its seperate gold count
 
-            if (animator != null)
-            {
-                animator.SetBool(isDyingHash, true);
-                gameObject.SetActive(false);
-                //Destroy(gameObject);
-            }
+        if (animator != null)
+        {
+            animator.SetBool(isDyingHash, true);
+            gameObject.SetActive(false);
         }
+        
     }
 }

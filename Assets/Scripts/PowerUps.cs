@@ -13,5 +13,6 @@ public class PowerUps : MonoBehaviour
     public void OnFreezeBottonPressed()
     {
         //Enemy Freeze for 10sec
+        //Freeze = EnemyNavigation.instance
     }
 }
