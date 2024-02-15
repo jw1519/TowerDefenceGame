@@ -25,10 +25,7 @@ public class EnemyNavigation : MonoBehaviour
     public NavMeshAgent Enemy;
     public Animator animator;
     public Transform target;
-
-    public TextMeshProUGUI Gold;
     
-    private int gold = 0;
     public int health = 100;
     int isDyingHash;
 
@@ -41,7 +38,6 @@ public class EnemyNavigation : MonoBehaviour
     {
         Enemy = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
-        Gold.GetComponent<TextMeshProUGUI>();
         isDyingHash = Animator.StringToHash("IsDying");
 
         destination = Enemy.destination;
@@ -57,7 +53,15 @@ public class EnemyNavigation : MonoBehaviour
            
         }
         if (health <= 0)
-            IncreaseGold();
+        {
+            Gold.instance.IncreaseGold();
+            if (animator != null)
+            {
+                animator.SetBool(isDyingHash, true);
+                gameObject.SetActive(false);
+            }
+        }
+            
 
 
 
@@ -82,18 +86,5 @@ public class EnemyNavigation : MonoBehaviour
             gameObject.SetActive(false);
             //Destroy(gameObject);
         }
-    }
-    public void IncreaseGold()
-    {
-        
-        gold = gold +10;
-        Gold.SetText("Gold: " + gold); // not working as every enemy has its seperate gold count
-
-        if (animator != null)
-        {
-            animator.SetBool(isDyingHash, true);
-            gameObject.SetActive(false);
-        }
-        
     }
 }

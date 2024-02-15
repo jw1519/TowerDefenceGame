@@ -8903,6 +8903,7 @@ GameObject:
   - component: {fileID: 1049768651}
   - component: {fileID: 1049768652}
   - component: {fileID: 1049768653}
+  - component: {fileID: 1049768654}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9022,6 +9023,19 @@ MonoBehaviour:
   - tag: Dragon
     objectToPool: {fileID: 7454279467243001119, guid: 405128f22b859534eb6964c671d32124, type: 3}
     amountToPool: 1
+--- !u!114 &1049768654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049768647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdf8b1e791ce2354ba1817b2a71d1406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldText: {fileID: 1096200309}
 --- !u!1001 &1054927335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9492,6 +9506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GoldText
       objectReference: {fileID: 0}
+    - target: {fileID: 3803344880040738893, guid: 5f260e6c38323984da64be915645a87b, type: 3}
+      propertyPath: m_text
+      value: 'Gold: 0'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9737,6 +9755,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1096200309 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3803344880040738893, guid: 5f260e6c38323984da64be915645a87b, type: 3}
+  m_PrefabInstance: {fileID: 1056034512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1114898040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11908,7 +11937,7 @@ Transform:
   m_GameObject: {fileID: 1309198541}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 132.87253, y: 23.7, z: 26.77}
+  m_LocalPosition: {x: 132.87256, y: 23.699951, z: 26.77002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
