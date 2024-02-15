@@ -27,13 +27,10 @@ public class PlacementManager : MonoBehaviour
         {
             towerPannel.SetActive(false);
             upgradesPannel.SetActive(true);
-            Debug.Log("Cant build there!");
             return;
         }
         
         GameObject archerTower = BuildManager.instance.GetTowerToBuild();
-
-
         tower = (GameObject)Instantiate(archerTower, transform.position + TowerOffset, transform.rotation);
     }
 

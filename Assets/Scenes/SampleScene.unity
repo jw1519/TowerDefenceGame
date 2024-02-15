@@ -2733,6 +2733,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 339538049671788405, guid: 660438946225a2f42a92a9521486d508, type: 3}
+      propertyPath: m_TagString
+      value: Pannel
+      objectReference: {fileID: 0}
     - target: {fileID: 1052898743927441987, guid: 660438946225a2f42a92a9521486d508, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 143.2351
@@ -2740,6 +2744,14 @@ PrefabInstance:
     - target: {fileID: 1052898743927441987, guid: 660438946225a2f42a92a9521486d508, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -53
+      objectReference: {fileID: 0}
+    - target: {fileID: 2097046820479837827, guid: 660438946225a2f42a92a9521486d508, type: 3}
+      propertyPath: m_BlockingObjects
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441203780864113330, guid: 660438946225a2f42a92a9521486d508, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3847192229243861515, guid: 660438946225a2f42a92a9521486d508, type: 3}
       propertyPath: m_Name
@@ -2899,7 +2911,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7681780544539077978, guid: 660438946225a2f42a92a9521486d508, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1395412024}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 339538049671788405, guid: 660438946225a2f42a92a9521486d508, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 510756647}
   m_SourcePrefab: {fileID: 100100000, guid: 660438946225a2f42a92a9521486d508, type: 3}
 --- !u!224 &298057343 stripped
 RectTransform:
@@ -5540,6 +5555,51 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 339538049671788405, guid: 660438946225a2f42a92a9521486d508, type: 3}
   m_PrefabInstance: {fileID: 298057342}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &510756647
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510756644}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 430, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 225, y: 641}
+  m_EdgeRadius: 0
 --- !u!1001 &516883254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8904,6 +8964,7 @@ GameObject:
   - component: {fileID: 1049768652}
   - component: {fileID: 1049768653}
   - component: {fileID: 1049768654}
+  - component: {fileID: 1049768655}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9036,6 +9097,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldText: {fileID: 1096200309}
+--- !u!114 &1049768655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049768647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbaa5d6b83db6e340bc0e7f0cda74b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1054927335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19429,6 +19502,10 @@ PrefabInstance:
     - target: {fileID: 1714206603278299626, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1714206603278299626, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
+      propertyPath: m_TagString
+      value: Pannel
       objectReference: {fileID: 0}
     - target: {fileID: 2497910684898407060, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
