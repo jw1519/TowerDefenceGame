@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Destination"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             health = health - 1;
             healthText.SetText("Health: " +  health);
