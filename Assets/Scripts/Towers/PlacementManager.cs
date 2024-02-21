@@ -15,6 +15,7 @@ public class PlacementManager : MonoBehaviour
 
     private Renderer rend;
     private Color startColor;
+    private bool IsOverPannel = true;
 
     private void Start()
     {
@@ -23,16 +24,19 @@ public class PlacementManager : MonoBehaviour
     }
     private void OnMouseDown()
     {
-
-        if (tower != null)// stops towers on towers add upgrades appear instead
+        if (IsOverPannel == true)
         {
-            towerPannel.SetActive(false);
-            upgradesPannel.SetActive(true);
-            return;
+            if (tower != null)// stops towers on towers add upgrades appear instead
+            {
+                towerPannel.SetActive(false);
+                upgradesPannel.SetActive(true);
+                return;
+            }
+        
+             GameObject archerTower = BuildManager.instance.GetTowerToBuild();
+             tower = (GameObject)Instantiate(archerTower, transform.position + TowerOffset, transform.rotation);
         }
         
-        GameObject archerTower = BuildManager.instance.GetTowerToBuild();
-        tower = (GameObject)Instantiate(archerTower, transform.position + TowerOffset, transform.rotation);
     }
 
 
