@@ -5,17 +5,21 @@ using UnityEngine.EventSystems;
 
 public class UITest : MonoBehaviour //https://forum.unity.com/threads/how-to-detect-if-mouse-is-over-ui.1025533/
 {
-
+    public bool IsOverPannel;
     int UILayer;
 
     private void Start()
     {
         UILayer = LayerMask.NameToLayer("Pannel");
+        GetComponent
     }
 
     private void Update()
     {
         print(IsPointerOverUIElement() ? "Over UI" : "Not over UI");
+
+        if (IsOverPannel == false)
+
     }
 
 
@@ -33,8 +37,13 @@ public class UITest : MonoBehaviour //https://forum.unity.com/threads/how-to-det
         {
             RaycastResult curRaysastResult = eventSystemRaysastResults[index];
             if (curRaysastResult.gameObject.layer == UILayer)
+            {
+                IsOverPannel = true;
                 return true;
+            }
+                
         }
+        IsOverPannel = false;
         return false;
     }
 

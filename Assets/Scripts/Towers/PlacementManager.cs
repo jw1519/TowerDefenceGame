@@ -11,11 +11,12 @@ public class PlacementManager : MonoBehaviour
     public GameObject upgradesPannel;
     public GameObject towerPannel;
 
+    public UITest UITest;
+
     private GameObject tower;
 
     private Renderer rend;
     private Color startColor;
-    private bool IsOverPannel = true;
 
     private void Start()
     {
@@ -24,7 +25,7 @@ public class PlacementManager : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (IsOverPannel == true)
+        if (UITest.IsOverPannel == false)
         {
             if (tower != null)// stops towers on towers add upgrades appear instead
             {
@@ -32,10 +33,12 @@ public class PlacementManager : MonoBehaviour
                 upgradesPannel.SetActive(true);
                 return;
             }
-        
-             GameObject archerTower = BuildManager.instance.GetTowerToBuild();
-             tower = (GameObject)Instantiate(archerTower, transform.position + TowerOffset, transform.rotation);
+
+            GameObject archerTower = BuildManager.instance.GetTowerToBuild();
+            tower = (GameObject)Instantiate(archerTower, transform.position + TowerOffset, transform.rotation);
         }
+        else
+            return;
         
     }
 
@@ -43,10 +46,11 @@ public class PlacementManager : MonoBehaviour
     // when hoving over a tile
     void OnMouseEnter()
     {
-        rend.material.color = hoverColor;
+        if(UITest.IsOverPannel == false)
+             rend.material.color = hoverColor;
     }
     private void OnMouseExit()
     {
-        rend.material.color = startColor;
+       rend.material.color = startColor;
     }
 }
