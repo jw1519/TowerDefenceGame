@@ -22,7 +22,7 @@ public class EnemyNavigation : MonoBehaviour
 
 
     Vector3 destination;
-    public NavMeshAgent Enemy;
+    public NavMeshAgent enemy;
     public Animator animator;
     public Transform target;
     
@@ -36,11 +36,11 @@ public class EnemyNavigation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Enemy = GetComponent<NavMeshAgent>();
+        enemy = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         isDyingHash = Animator.StringToHash("IsDying");
 
-        destination = Enemy.destination;
+        destination = enemy.destination;
     }
 
     // Update is called once per frame
@@ -49,7 +49,7 @@ public class EnemyNavigation : MonoBehaviour
         if (Vector3.Distance(destination, target.position) > 1f)
         {
             destination = target.position;
-            Enemy.destination = destination;
+            enemy.destination = destination;
            
         }
         if (health <= 0)

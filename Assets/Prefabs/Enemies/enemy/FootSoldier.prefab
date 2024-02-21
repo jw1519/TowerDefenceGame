@@ -26,15 +26,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57188ed5868f11c4fa96b46c325d0d2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.1080017
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57188ed5868f11c4fa96b46c325d0d2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57188ed5868f11c4fa96b46c325d0d2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.784485
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57188ed5868f11c4fa96b46c325d0d2d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -343,8 +343,7 @@ MonoBehaviour:
   Enemy: {fileID: 4340035333577336964}
   animator: {fileID: 3406568323332555371}
   target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
-  Gold: {fileID: 3803344880040738893, guid: 5f260e6c38323984da64be915645a87b, type: 3}
-  Health: 100
+  health: 100
 --- !u!114 &-1344475869321188563
 MonoBehaviour:
   m_ObjectHideFlags: 0
