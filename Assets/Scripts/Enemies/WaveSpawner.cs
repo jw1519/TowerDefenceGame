@@ -34,7 +34,7 @@ public class WaveSpawner : MonoBehaviour
     }
     void SpawnEnemy()
     {
-        GameObject spawnedEnemy = EnemyPool.instance.SpawnFromPoolEnemy("Enemy", Spawnpoint.position, Quaternion.identity);
+        GameObject spawnedEnemy = EnemyPool.instance.SpawnFromPoolEnemy("Enemy", Spawnpoint.position, Quaternion.identity); //change for different enemies
         spawnedEnemy.GetComponent<NavMeshAgent>().enabled = true;
         spawnedEnemy.transform.SetParent(enemy);
         spawnedEnemy.GetComponent<NavMeshAgent>().destination = EndPoint.position;
