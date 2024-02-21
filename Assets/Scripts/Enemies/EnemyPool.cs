@@ -51,15 +51,13 @@ public class EnemyPool : MonoBehaviour
         if (pooledDictionary.ContainsKey(tag))
         {
             GameObject objectToSpawn = pooledDictionary[tag].Dequeue();
-        objectToSpawn.SetActive(true);
+            objectToSpawn.SetActive(true);
 
-        objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
+             objectToSpawn.transform.position = position;
+            objectToSpawn.transform.rotation = rotation;
 
-        pooledDictionary[tag].Enqueue(objectToSpawn);
-
-        return objectToSpawn;
-            
+            pooledDictionary[tag].Enqueue(objectToSpawn);
+            return objectToSpawn;
         }
         else
         {

@@ -5,21 +5,10 @@ using UnityEngine;
 using UnityEngine.AI;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Pool;
 
 public class EnemyNavigation : MonoBehaviour
 {
-    //public static EnemyNavigation instance;
-
-    //private void Awake()
-    //{
-    //    if (instance != null)
-    //        Debug.LogError("more than one EnemyNavigation");
-
-    //    instance = this;
-    //}
-
-
-
 
     Vector3 navMeshDestination;
     public NavMeshAgent enemy;
@@ -45,10 +34,7 @@ public class EnemyNavigation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         isDyingHash = Animator.StringToHash("IsDying");
-
-
     }
 
     // Update is called once per frame
@@ -58,7 +44,6 @@ public class EnemyNavigation : MonoBehaviour
         {
             navMeshDestination = endLocation.position;
             enemy.destination = navMeshDestination;
-           
         }
         if (health <= 0)
         {

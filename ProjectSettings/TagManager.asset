@@ -16,6 +16,8 @@ TagManager:
   - MagicTower
   - Pannel
   - Path
+  - Dragon
+  - Knight
   layers:
   - Default
   - TransparentFX

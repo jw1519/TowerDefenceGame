@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 088f17ce9a2fe8942bb6232894277f7c, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Dragon
       objectReference: {fileID: 0}
     - target: {fileID: 1125421596319804855, guid: 088f17ce9a2fe8942bb6232894277f7c, type: 3}
       propertyPath: m_Layer
@@ -462,13 +462,10 @@ PrefabInstance:
       addedObject: {fileID: -6837061559322334925}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 088f17ce9a2fe8942bb6232894277f7c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3675313180035902774}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 088f17ce9a2fe8942bb6232894277f7c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3140092506113318819}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 088f17ce9a2fe8942bb6232894277f7c, type: 3}
-      insertIndex: -1
       addedObject: {fileID: -7012017481045381147}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 088f17ce9a2fe8942bb6232894277f7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3675313180035902774}
   m_SourcePrefab: {fileID: 100100000, guid: 088f17ce9a2fe8942bb6232894277f7c, type: 3}
 --- !u!1 &7454279467243001119 stripped
 GameObject:
@@ -518,36 +515,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3675313180035902774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7454279467243001119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35bc5cd887045ac46b9748269ef228df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemy: {fileID: 2372282990586233618}
-  animator: {fileID: -6837061559322334925}
-  endLocation: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
-  health: 300
---- !u!114 &3140092506113318819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7454279467243001119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e48038c252a6d7459d609eca19460f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthText: {fileID: 7106585336699532092, guid: c3a0b81a84062634b9122e56fe341a6e, type: 3}
-  target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
 --- !u!65 &-7012017481045381147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -569,3 +536,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 15, y: 5, z: 25}
   m_Center: {x: -2, y: 22, z: -3}
+--- !u!114 &3675313180035902774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7454279467243001119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35bc5cd887045ac46b9748269ef228df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 2372282990586233618}
+  animator: {fileID: -6837061559322334925}
+  endLocation: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
+  health: 300
