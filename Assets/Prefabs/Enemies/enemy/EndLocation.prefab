@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 544908068034085518}
   - component: {fileID: -8425048472605213756}
   m_Layer: 0
-  m_Name: Destination
+  m_Name: EndLocation
   m_TagString: Destination
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

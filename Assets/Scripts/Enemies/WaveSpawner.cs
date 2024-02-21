@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class WaveSpawner : MonoBehaviour
     private float countdown = 4f;
     public int WaveNumber = 0;
     public Transform Spawnpoint;
-    public Transform Enemy;
+    public Transform EndPoint;
+    public Transform enemy;
 
     private void Update()
     {
@@ -32,9 +34,10 @@ public class WaveSpawner : MonoBehaviour
     }
     void SpawnEnemy()
     {
-        //Instantiate(enemyPrefab, Spawnpoint.position, Spawnpoint.rotation);
         GameObject spawnedEnemy = EnemyPool.instance.SpawnFromPoolEnemy("Enemy", Spawnpoint.position, Quaternion.identity);
-        spawnedEnemy.transform.SetParent(Enemy);
+        spawnedEnemy.GetComponent<NavMeshAgent>().enabled = true;
+        spawnedEnemy.transform.SetParent(enemy);
+        spawnedEnemy.GetComponent<NavMeshAgent>().destination = EndPoint.position;
     }
 
 }

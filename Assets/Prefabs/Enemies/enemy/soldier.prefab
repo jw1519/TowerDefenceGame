@@ -73,6 +73,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 94597a9e6125e3540aca9cb09ddb3aef, type: 2}
     - target: {fileID: 5866666021909216657, guid: a8b32aad25ff40d4894f480aae7ece86, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: a8b32aad25ff40d4894f480aae7ece86, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 9d35253a786244f48b681572371c4c30, type: 2}
@@ -119,11 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35bc5cd887045ac46b9748269ef228df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 4739052524393776485}
+  enemy: {fileID: 4739052524393776485}
   animator: {fileID: 943457914877679551}
-  target: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
-  Gold: {fileID: 3803344880040738893, guid: 5f260e6c38323984da64be915645a87b, type: 3}
-  Health: 200
+  endLocation: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
+  health: 100
 --- !u!195 &4739052524393776485
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -131,7 +134,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5817570455017297791}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 6

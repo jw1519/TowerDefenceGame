@@ -8,23 +8,23 @@ using UnityEngine.UI;
 
 public class EnemyNavigation : MonoBehaviour
 {
-    public static EnemyNavigation instance;
+    //public static EnemyNavigation instance;
 
-    private void Awake()
-    {
-        if (instance != null)
-            Debug.LogError("more than one gamemanager");
+    //private void Awake()
+    //{
+    //    if (instance != null)
+    //        Debug.LogError("more than one EnemyNavigation");
 
-        instance = this;
-    }
-
-
+    //    instance = this;
+    //}
 
 
-    Vector3 destination;
+
+
+    Vector3 navMeshDestination;
     public NavMeshAgent enemy;
     public Animator animator;
-    public Transform target;
+    public Transform endLocation;
     
     public int health = 100;
     int isDyingHash;
@@ -33,23 +33,37 @@ public class EnemyNavigation : MonoBehaviour
     int ArrowPower = 5;
     int MagicPower = 15;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         enemy = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+
+
+        navMeshDestination = enemy.destination;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
         isDyingHash = Animator.StringToHash("IsDying");
 
-        destination = enemy.destination;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(destination, target.position) > 1f)
+
+        //if (!enemy.isOnNavMesh)b
+        //{
+        //    enemy.enabled = false;
+        //    enemy.enabled = true;
+        //}
+        if (Vector3.Distance(navMeshDestination, endLocation.position) > 1f)
         {
-            destination = target.position;
-            enemy.destination = destination;
+            navMeshDestination = endLocation.position;
+            enemy.destination = navMeshDestination;
            
         }
         if (health <= 0)
@@ -61,10 +75,6 @@ public class EnemyNavigation : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
-            
-
-
-
 
     }
     private void OnTriggerEnter(Collider other)
@@ -84,7 +94,6 @@ public class EnemyNavigation : MonoBehaviour
         else if (other.gameObject.CompareTag("Destination"))
         {
             gameObject.SetActive(false);
-            //Destroy(gameObject);
         }
     }
 }

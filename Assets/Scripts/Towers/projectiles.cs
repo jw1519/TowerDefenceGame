@@ -40,7 +40,6 @@ public class projectiles : MonoBehaviour
     private void HitTarget()
     {
         gameObject.SetActive(false);
-        //Destroy(gameObject);
 
     }
      

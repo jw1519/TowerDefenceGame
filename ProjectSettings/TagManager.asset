@@ -15,6 +15,7 @@ TagManager:
   - ArcherTower
   - MagicTower
   - Pannel
+  - Path
   layers:
   - Default
   - TransparentFX
