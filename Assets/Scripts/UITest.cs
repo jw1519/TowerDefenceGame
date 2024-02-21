@@ -11,14 +11,11 @@ public class UITest : MonoBehaviour //https://forum.unity.com/threads/how-to-det
     private void Start()
     {
         UILayer = LayerMask.NameToLayer("Pannel");
-        GetComponent
     }
 
     private void Update()
     {
         print(IsPointerOverUIElement() ? "Over UI" : "Not over UI");
-
-        if (IsOverPannel == false)
 
     }
 

@@ -54,12 +54,6 @@ public class EnemyNavigation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        //if (!enemy.isOnNavMesh)b
-        //{
-        //    enemy.enabled = false;
-        //    enemy.enabled = true;
-        //}
         if (Vector3.Distance(navMeshDestination, endLocation.position) > 1f)
         {
             navMeshDestination = endLocation.position;
