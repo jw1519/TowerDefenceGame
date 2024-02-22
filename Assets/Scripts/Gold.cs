@@ -8,7 +8,7 @@ public class Gold : MonoBehaviour
     public TextMeshProUGUI goldText;
     public static Gold instance;
 
-    private int GoldAmount = 0;
+    private int GoldAmount = 200;
 
     void Awake()
     {
