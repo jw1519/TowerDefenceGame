@@ -5516,6 +5516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldText: {fileID: 1096200309}
+  GoldAmount: 200
 --- !u!1001 &516883254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7431,7 +7432,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -31.7, y: -76.60646}
+  m_AnchoredPosition: {x: -28.2, y: -76.60646}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &721718066
@@ -7454,7 +7455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Magic Tower -550
+  m_text: Magic Tower - 500
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -12713,7 +12714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -40.9, y: -79.77057}
+  m_AnchoredPosition: {x: -38.6, y: -79.77057}
   m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1414229749
@@ -12736,7 +12737,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cannon Tower - 400
+  m_text: Cannon Tower - 350
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19201,10 +19202,9 @@ PrefabInstance:
       value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 630202644911965544, guid: 699f8c2f2399dc24589c9140602f08e8, type: 3}
-    - {fileID: 990568532945636944, guid: 699f8c2f2399dc24589c9140602f08e8, type: 3}
-    - {fileID: 2584986265044853727, guid: 699f8c2f2399dc24589c9140602f08e8, type: 3}
-    - {fileID: 3269873544727042148, guid: 699f8c2f2399dc24589c9140602f08e8, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8288570312022286000, guid: 699f8c2f2399dc24589c9140602f08e8, type: 3}

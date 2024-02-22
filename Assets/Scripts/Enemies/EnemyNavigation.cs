@@ -15,12 +15,12 @@ public class EnemyNavigation : MonoBehaviour
     public Animator animator;
     public Transform endLocation;
     
-    public int health = 100;
+    public int health = 50;
     int isDyingHash;
 
-    int CannonBallPower = 10;
-    int ArrowPower = 5;
-    int MagicPower = 15;
+    int CannonBallPower = 20;
+    int ArrowPower = 10;
+    int MagicPower = 25;
 
     private void Awake()
     {
@@ -58,6 +58,7 @@ public class EnemyNavigation : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("hit");
         if (other.gameObject.CompareTag("CannonBall"))
         {
             health = health - CannonBallPower;

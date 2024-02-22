@@ -29,15 +29,28 @@ public class BuildManager : MonoBehaviour
     }
     public void GetArcherTower()
     {
-        towerToBuild = archerTower;
+        if (Gold.instance.GoldAmount >= 200)
+        {
+            towerToBuild = archerTower;
+            Gold.instance.DecreaseGold();
+        }
+            
     }
     public void GetCannonTower()
     {
-        towerToBuild = cannonTower;
+        if (Gold.instance.GoldAmount >= 350)
+        {
+            towerToBuild = cannonTower;
+            Gold.instance.DecreaseGold();
+        }
+        
     }
     public void GetMagicTower()
     {
-        towerToBuild = magicTower;
+        if (Gold.instance.GoldAmount >= 500)
+        {
+            towerToBuild = magicTower;
+            Gold.instance.DecreaseGold();
+        }
     }
-
 }
