@@ -2805,6 +2805,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 339538049671788405, guid: 660438946225a2f42a92a9521486d508, type: 3}
       insertIndex: -1
       addedObject: {fileID: 510756647}
+    - targetCorrespondingSourceObject: {fileID: 339538049671788405, guid: 660438946225a2f42a92a9521486d508, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 510756650}
   m_SourcePrefab: {fileID: 100100000, guid: 660438946225a2f42a92a9521486d508, type: 3}
 --- !u!224 &298057343 stripped
 RectTransform:
@@ -5532,6 +5535,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 225, y: 641}
   m_EdgeRadius: 0
+--- !u!114 &510756650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510756644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdf8b1e791ce2354ba1817b2a71d1406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldText: {fileID: 1096200309}
 --- !u!1001 &516883254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8953,7 +8969,6 @@ GameObject:
   - component: {fileID: 1049768651}
   - component: {fileID: 1049768652}
   - component: {fileID: 1049768653}
-  - component: {fileID: 1049768654}
   - component: {fileID: 1049768655}
   m_Layer: 0
   m_Name: GameManager
@@ -9072,23 +9087,10 @@ MonoBehaviour:
     amountToPool: 100
   - tag: Knight
     objectToPool: {fileID: 5817570455017297791, guid: 13aa4950f54b1dc4bbb5fe896a3b4731, type: 3}
-    amountToPool: 1
+    amountToPool: 100
   - tag: Dragon
     objectToPool: {fileID: 7454279467243001119, guid: 405128f22b859534eb6964c671d32124, type: 3}
-    amountToPool: 1
---- !u!114 &1049768654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049768647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdf8b1e791ce2354ba1817b2a71d1406, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goldText: {fileID: 1096200309}
+    amountToPool: 100
 --- !u!114 &1049768655
 MonoBehaviour:
   m_ObjectHideFlags: 0

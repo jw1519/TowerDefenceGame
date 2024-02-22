@@ -344,4 +344,4 @@ MonoBehaviour:
   enemy: {fileID: 4340035333577336964}
   animator: {fileID: 3406568323332555371}
   endLocation: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
-  health: 100
+  health: 50

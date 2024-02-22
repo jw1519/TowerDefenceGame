@@ -20,4 +20,9 @@ public class Gold : MonoBehaviour
         GoldAmount = GoldAmount + 10;
         goldText.SetText("Gold: " + GoldAmount);
     }
+    public void DecreaseGold()
+    {
+        GoldAmount = GoldAmount - 10;
+        goldText.SetText("Gold: " + GoldAmount);
+    }
 }
