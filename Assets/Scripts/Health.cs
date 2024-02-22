@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
     public TextMeshProUGUI healthText;
     private int health = 100;
-    public Transform target;
    
 
     // Start is called before the first frame update
@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
         {
             health = 0;
             Debug.Log("Lost!");
+            SceneManager.LoadScene("EndGame");
         }
     }
 }
