@@ -3195,7 +3195,7 @@ GameObject:
   - component: {fileID: 351179740}
   m_Layer: 0
   m_Name: Enemies
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3209,7 +3209,7 @@ Transform:
   m_GameObject: {fileID: 351179739}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -116.892, y: 24.74924, z: 5.684484}
+  m_LocalPosition: {x: -116.892, y: 24.74924, z: -27.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9019,6 +9019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de2a9583ab109f4890512dcb41354f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerToBuild: {fileID: 0}
   archerTower: {fileID: 3077624602755273799, guid: f9a40eb8ccdcbbe4aa2cf685961a03e9, type: 3}
   cannonTower: {fileID: 3680463821713200747, guid: d2ea690f67a7e3a41936d1e980faff3b, type: 3}
   magicTower: {fileID: 6034089078044123391, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
@@ -12737,7 +12738,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cannon Tower - 350
+  m_text: Cannon Tower - 300
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

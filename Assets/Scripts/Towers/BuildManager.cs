@@ -13,7 +13,8 @@ public class BuildManager : MonoBehaviour
         instance = this;
     }
 
-    private GameObject towerToBuild;
+    [HideInInspector]public GameObject towerToBuild;
+
     public GameObject archerTower;
     public GameObject cannonTower;
     public GameObject magicTower;
@@ -38,7 +39,7 @@ public class BuildManager : MonoBehaviour
     }
     public void GetCannonTower()
     {
-        if (Gold.instance.GoldAmount >= 350)
+        if (Gold.instance.GoldAmount >= 300)
         {
             towerToBuild = cannonTower;
             Gold.instance.DecreaseGold();

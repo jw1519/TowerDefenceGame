@@ -22,7 +22,21 @@ public class Gold : MonoBehaviour
     }
     public void DecreaseGold()
     {
-        GoldAmount = GoldAmount - 10;
-        goldText.SetText("Gold: " + GoldAmount);
+        if (BuildManager.instance.towerToBuild == BuildManager.instance.archerTower)
+        {
+            GoldAmount = GoldAmount - 200;
+            goldText.SetText("Gold: " + GoldAmount);
+        }
+        if (BuildManager.instance.towerToBuild == BuildManager.instance.cannonTower)
+        {
+            GoldAmount = GoldAmount - 300;
+            goldText.SetText("Gold: " + GoldAmount);
+        }
+        if (BuildManager.instance.towerToBuild == BuildManager.instance.magicTower)
+        {
+            GoldAmount = GoldAmount - 500;
+            goldText.SetText("Gold: " + GoldAmount);
+        }
+
     }
 }

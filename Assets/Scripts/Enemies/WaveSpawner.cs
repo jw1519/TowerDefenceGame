@@ -8,7 +8,7 @@ public class WaveSpawner : MonoBehaviour
     public Transform enemyPrefab;
     public float timeBetweenWaves = 5f;
     private float countdown = 4f;
-    public int WaveNumber = 0;
+    public int WaveNumber = 5;
     public Transform Spawnpoint;
     public Transform EndPoint;
     public Transform enemy;
@@ -34,10 +34,14 @@ public class WaveSpawner : MonoBehaviour
     }
     void SpawnEnemy()
     {
-        GameObject spawnedEnemy = EnemyPool.instance.SpawnFromPoolEnemy("Enemy", Spawnpoint.position, Quaternion.identity); //change for different enemies
-        spawnedEnemy.GetComponent<NavMeshAgent>().enabled = true;
-        spawnedEnemy.transform.SetParent(enemy);
-        spawnedEnemy.GetComponent<NavMeshAgent>().destination = EndPoint.position;
+        if (WaveNumber <= 5)
+        {
+            GameObject spawnedEnemy = EnemyPool.instance.SpawnFromPoolEnemy("Enemy", Spawnpoint.position, Quaternion.identity); //change for different enemies
+            spawnedEnemy.GetComponent<NavMeshAgent>().enabled = true;
+            spawnedEnemy.transform.SetParent(enemy);
+            spawnedEnemy.GetComponent<NavMeshAgent>().destination = EndPoint.position;
+        }
+        
     }
 
 }
