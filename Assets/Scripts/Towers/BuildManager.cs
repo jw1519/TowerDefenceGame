@@ -23,7 +23,7 @@ public class BuildManager : MonoBehaviour
 
     private void Start()
     {
-        towerToBuild = archerTower;
+        towerToBuild = noTower;
     }
     public GameObject GetTowerToBuild()
     {
