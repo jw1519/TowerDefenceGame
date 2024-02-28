@@ -14,7 +14,7 @@ public class Health : MonoBehaviour
     {
         healthText.GetComponent<TextMeshProUGUI>();
         health = 100;
-        healthText.SetText("Health: " + health);
+        healthText.SetText($"Health: {health}");
     }
 
 
