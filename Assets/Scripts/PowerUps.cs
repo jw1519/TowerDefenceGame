@@ -8,6 +8,7 @@ public class PowerUps : MonoBehaviour
     public void OnDoubleDamageButtonPress()
     {
         //Towers do double damage for 10 sec
+
     }
     public void OnFreezeBottonPressed()
     {
