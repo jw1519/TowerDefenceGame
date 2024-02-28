@@ -71,4 +71,11 @@ public class EnemyNavigation : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+    public void OnDoubleDamageButtonPress()
+    {
+        //Towers do double damage
+        CannonBallPower = CannonBallPower * 2;
+        MagicPower = MagicPower * 2;
+        ArrowPower = ArrowPower * 2;
+    }
 }
