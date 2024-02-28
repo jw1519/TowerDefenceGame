@@ -34,8 +34,8 @@ public class PlacementManager : MonoBehaviour
                 return;
             }
 
-            GameObject archerTower = BuildManager.instance.GetTowerToBuild();
-            tower = (GameObject)Instantiate(archerTower, transform.position + TowerOffset, transform.rotation);
+            GameObject Tower = BuildManager.instance.GetTowerToBuild();
+            tower = (GameObject)Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
         }
         else
             return;
