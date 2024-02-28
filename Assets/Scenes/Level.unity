@@ -7059,6 +7059,10 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Health:'
       objectReference: {fileID: 0}
+    - target: {fileID: 7106585336699532092, guid: c3a0b81a84062634b9122e56fe341a6e, type: 3}
+      propertyPath: m_margin.z
+      value: -108.321655
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8485,6 +8489,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &919105459 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7106585336699532092, guid: c3a0b81a84062634b9122e56fe341a6e, type: 3}
+  m_PrefabInstance: {fileID: 672864615}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &928083783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9613,6 +9628,10 @@ PrefabInstance:
     - target: {fileID: 3803344880040738893, guid: 5f260e6c38323984da64be915645a87b, type: 3}
       propertyPath: m_text
       value: 'Gold: 200'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3803344880040738893, guid: 5f260e6c38323984da64be915645a87b, type: 3}
+      propertyPath: m_margin.z
+      value: -56.088806
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19393,6 +19412,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7107408323313853759, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
+      propertyPath: healthText
+      value: 
+      objectReference: {fileID: 919105459}
     - target: {fileID: 544908068034085518, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
       propertyPath: m_ProvidesContacts
       value: 0
