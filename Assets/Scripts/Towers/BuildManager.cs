@@ -23,7 +23,7 @@ public class BuildManager : MonoBehaviour
 
     private void Start()
     {
-        towerToBuild = noTower;
+        SetNoTower();
     }
     public GameObject GetTowerToBuild()
     {
@@ -54,5 +54,9 @@ public class BuildManager : MonoBehaviour
             towerToBuild = magicTower;
             Gold.instance.DecreaseGold();
         }
+    }
+    public void SetNoTower()
+    {
+        towerToBuild = noTower;
     }
 }

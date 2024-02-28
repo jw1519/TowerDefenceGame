@@ -7,13 +7,15 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     public TextMeshProUGUI healthText;
-    private int health = 100;
+    public int health = 100;
    
 
     // Start is called before the first frame update
     void Start()
     {
         healthText.GetComponent<TextMeshProUGUI>();
+        health = 100;
+        healthText.SetText("Health: " + health);
     }
 
     private void OnTriggerEnter(Collider other)

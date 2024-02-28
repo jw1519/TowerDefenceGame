@@ -35,7 +35,15 @@ public class PlacementManager : MonoBehaviour
             }
 
             GameObject Tower = BuildManager.instance.GetTowerToBuild();
-            tower = (GameObject)Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
+
+            if (Tower != BuildManager.instance.noTower)
+            {
+                tower = (GameObject)Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
+                BuildManager.instance.SetNoTower();
+            }
+                
+
+
         }
         else
             return;
