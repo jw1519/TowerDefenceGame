@@ -36,7 +36,6 @@ public class Towers : MonoBehaviour
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
 
-
         float shortestDistance = Mathf.Infinity;
         GameObject nearestEnemy = null;
 
