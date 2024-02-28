@@ -17,12 +17,13 @@ public class Health : MonoBehaviour
         healthText.SetText("Health: " + health);
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
             health = health - 1;
-            healthText.SetText("Health: " +  health);
+            healthText.SetText($"Health: {health}");
         }
         if (health <= 0)
         {

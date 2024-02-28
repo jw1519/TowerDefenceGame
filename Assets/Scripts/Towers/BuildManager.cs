@@ -3,7 +3,7 @@ using UnityEngine;
 public class BuildManager : MonoBehaviour
 {
 
-    public static BuildManager instance;
+    public static BuildManager instance; // used in PlacementManager
 
     private void Awake()
     {
