@@ -9,7 +9,6 @@ using UnityEngine.Pool;
 
 public class EnemyNavigation : MonoBehaviour
 {
-
     Vector3 navMeshDestination;
     public NavMeshAgent enemy;
     public Animator animator;
@@ -27,16 +26,13 @@ public class EnemyNavigation : MonoBehaviour
         enemy = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
 
-
         navMeshDestination = enemy.destination;
     }
-
     // Start is called before the first frame update
     void Start()
     {
         isDyingHash = Animator.StringToHash("IsDying");
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -54,7 +50,6 @@ public class EnemyNavigation : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
-
     }
     private void OnTriggerEnter(Collider other)
     {

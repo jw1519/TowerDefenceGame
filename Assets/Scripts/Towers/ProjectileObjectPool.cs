@@ -11,8 +11,6 @@ public class ProjectileObjectPool : MonoBehaviour
     public GameObject objectToPool;
     public int amountToPool = 10;
 
-    
-
     [System.Serializable]
     public class Pool
     {
@@ -27,7 +25,6 @@ public class ProjectileObjectPool : MonoBehaviour
     {
         instance = this;
     }
-
 
     public List<Pool> pools;
     public Dictionary<string, Queue<GameObject>> pooledDictionary;
@@ -49,7 +46,6 @@ public class ProjectileObjectPool : MonoBehaviour
 
             pooledDictionary.Add(pool.tag, objectPool);
         }
-
 
         pooledObjects = new List<GameObject>();
         GameObject tmp;
@@ -84,7 +80,6 @@ public class ProjectileObjectPool : MonoBehaviour
         
     }
 
-
     // allow other scripts to set objects to active
     public GameObject GetPooledObject()
     {
@@ -97,6 +92,4 @@ public class ProjectileObjectPool : MonoBehaviour
         }
         return null;
     }
-
-
 }

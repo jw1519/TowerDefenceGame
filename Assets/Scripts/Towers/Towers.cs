@@ -30,7 +30,6 @@ public class Towers : MonoBehaviour
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         
     }
-    
 
     //finding enemy and seeing the distance, targeting system
     void UpdateTarget()
@@ -57,9 +56,6 @@ public class Towers : MonoBehaviour
         {
             target = null;
         }
-        
-        
-
     }
     private void Update()
     {
@@ -79,8 +75,6 @@ public class Towers : MonoBehaviour
             }
         }
         fireCountdown -= Time.deltaTime;
-
-
     }
    
     public void Shoot()
@@ -124,7 +118,6 @@ public class Towers : MonoBehaviour
                 projectiles.Seek(target);
             }
         }
-
     }
 
     //creates a radius that is shown when the tower is selected

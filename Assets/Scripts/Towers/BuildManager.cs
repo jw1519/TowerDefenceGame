@@ -36,7 +36,6 @@ public class BuildManager : MonoBehaviour
             towerToBuild = archerTower;
             Gold.instance.DecreaseGold();
         }
-            
     }
     public void GetCannonTower()
     {
@@ -45,7 +44,6 @@ public class BuildManager : MonoBehaviour
             towerToBuild = cannonTower;
             Gold.instance.DecreaseGold();
         }
-        
     }
     public void GetMagicTower()
     {

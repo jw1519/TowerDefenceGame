@@ -33,16 +33,12 @@ public class EnemyPool : MonoBehaviour
 
         foreach (Pool pool in pools)
         {
-            
-
             for (int i = 0; i < pool.amountToPool; i++)
             {
                 GameObject obj = Instantiate(pool.objectToPool);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
-                
             }
-
             pooledDictionary.Add(pool.tag, objectPool);
         }
     }
@@ -64,8 +60,6 @@ public class EnemyPool : MonoBehaviour
             Debug.Log("Pool doesnt excist " + tag);
             return null;
         }
-
-        
     }
     // allow other scripts to set objects to active
     public GameObject GetPooledObjectEnemy()
@@ -79,5 +73,4 @@ public class EnemyPool : MonoBehaviour
         }
         return null;
     }
-
 }

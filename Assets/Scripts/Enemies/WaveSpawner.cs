@@ -22,7 +22,6 @@ public class WaveSpawner : MonoBehaviour
         }
         countdown -= Time.deltaTime;
     }
-
     IEnumerator SpawnWave()
     {
         for (int i = 0; i < WaveNumber; i++)
@@ -39,5 +38,4 @@ public class WaveSpawner : MonoBehaviour
         spawnedEnemy.transform.SetParent(enemy);
         spawnedEnemy.GetComponent<NavMeshAgent>().destination = EndPoint.position;
     }
-
 }

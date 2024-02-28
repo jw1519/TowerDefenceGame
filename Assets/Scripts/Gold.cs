@@ -37,6 +37,5 @@ public class Gold : MonoBehaviour
             GoldAmount = GoldAmount - 500;
             goldText.SetText("Gold: " + GoldAmount);
         }
-
     }
 }

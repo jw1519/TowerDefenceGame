@@ -41,15 +41,10 @@ public class PlacementManager : MonoBehaviour
                 tower = (GameObject)Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
                 BuildManager.instance.SetNoTower();
             }
-                
-
-
         }
         else
             return;
-        
     }
-
 
     // when hoving over a tile
     void OnMouseEnter()
