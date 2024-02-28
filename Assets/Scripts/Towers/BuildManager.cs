@@ -18,6 +18,7 @@ public class BuildManager : MonoBehaviour
     public GameObject archerTower;
     public GameObject cannonTower;
     public GameObject magicTower;
+    public GameObject noTower;
 
 
     private void Start()
