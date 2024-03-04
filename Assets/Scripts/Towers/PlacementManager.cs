@@ -18,6 +18,8 @@ public class PlacementManager : MonoBehaviour
     private Renderer rend;
     private Color startColor;
 
+    public AudioSource CantDoThat;
+
     private void Start()
     {
         rend = GetComponent<Renderer>();
@@ -41,6 +43,8 @@ public class PlacementManager : MonoBehaviour
                 tower = (GameObject)Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
                 BuildManager.instance.SetNoTower();
             }
+            else
+                PlayAudio();
         }
         else
             return;
@@ -55,5 +59,11 @@ public class PlacementManager : MonoBehaviour
     private void OnMouseExit()
     {
        rend.material.color = startColor;
+    }
+
+    private void PlayAudio()
+    {
+        if (CantDoThat != null)
+            CantDoThat.Play();
     }
 }
