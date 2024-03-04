@@ -14,7 +14,6 @@ public class Towers : MonoBehaviour
 
     public string enemyTag = "Enemy";
 
-
     [Header("Changes")]
 
     public float range = 100f;
