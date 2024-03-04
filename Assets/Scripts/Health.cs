@@ -25,6 +25,14 @@ public class Health : MonoBehaviour
             health = health - 1;
             healthText.SetText($"Health: {health}");
         }
+        else if (other.gameObject.CompareTag("Knight"))
+        {
+            health = health - 3;
+        }
+        else
+        {
+            health = health - 10;
+        }
         if (health <= 0)
         {
             health = 0;
