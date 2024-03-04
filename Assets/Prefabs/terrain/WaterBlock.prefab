@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2116570730524691610}
   - component: {fileID: 580994317799929418}
   - component: {fileID: 1859003621799695182}
-  - component: {fileID: 4558213663223262770}
   m_Layer: 0
   m_Name: WaterBlock
   m_TagString: floor
@@ -106,20 +105,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4558213663223262770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2553578939443415967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adb1034af4fc21644af6bb0432c68917, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hoverColor: {r: 0.19277322, g: 0.7169812, b: 0.19977528, a: 0}
-  TowerOffset: {x: 0, y: 6, z: 0}
-  upgradesPannel: {fileID: 1714206603278299626, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
-  towerPannel: {fileID: 764218891350126267, guid: 699f8c2f2399dc24589c9140602f08e8, type: 3}
-  UITest: {fileID: 0}

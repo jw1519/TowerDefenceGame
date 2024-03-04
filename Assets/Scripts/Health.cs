@@ -23,7 +23,6 @@ public class Health : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             health = health - 1;
-            healthText.SetText($"Health: {health}");
         }
         else if (other.gameObject.CompareTag("Knight"))
         {
@@ -33,6 +32,7 @@ public class Health : MonoBehaviour
         {
             health = health - 10;
         }
+        healthText.SetText($"Health: {health}");
         if (health <= 0)
         {
             health = 0;
