@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
         }
         else if (other.gameObject.CompareTag("Knight"))
         {
-            health = health - 3;
+            health = health - 300;
         }
         else
         {

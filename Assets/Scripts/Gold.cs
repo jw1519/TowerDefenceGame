@@ -10,6 +10,8 @@ public class Gold : MonoBehaviour
 
     public int GoldAmount = 200;
 
+    private int TotalGoldEarned = 0; // shows how much gold was earned once the game is over
+
     void Awake()
     {
         instance = this;
@@ -19,6 +21,7 @@ public class Gold : MonoBehaviour
     {
         GoldAmount = GoldAmount + 10;
         goldText.SetText("Gold: " + GoldAmount);
+        TotalGoldEarned = TotalGoldEarned + 10;
     }
     public void DecreaseGold()
     {
