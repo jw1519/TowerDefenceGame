@@ -77,6 +77,5 @@ public class EnemyNavigation : MonoBehaviour
         CannonBallPower = CannonBallPower * 2;
         MagicPower = MagicPower * 2;
         ArrowPower = ArrowPower * 2;
-
     }
 }
