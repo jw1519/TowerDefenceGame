@@ -49,7 +49,7 @@ public class EnemyPool : MonoBehaviour
             GameObject objectToSpawn = pooledDictionary[tag].Dequeue();
             objectToSpawn.SetActive(true);
 
-             objectToSpawn.transform.position = position;
+            objectToSpawn.transform.position = position;
             objectToSpawn.transform.rotation = rotation;
 
             pooledDictionary[tag].Enqueue(objectToSpawn);
