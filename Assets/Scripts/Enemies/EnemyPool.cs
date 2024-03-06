@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class EnemyPool : MonoBehaviour
 {
@@ -47,17 +48,28 @@ public class EnemyPool : MonoBehaviour
         if (pooledDictionary.ContainsKey(tag))
         {
             GameObject objectToSpawn = pooledDictionary[tag].Dequeue();
-            objectToSpawn.SetActive(true);
+            if (!objectToSpawn.activeInHierarchy)
+            {
 
-            objectToSpawn.transform.position = position;
-            objectToSpawn.transform.rotation = rotation;
+            
+                objectToSpawn.SetActive(true);
 
-            pooledDictionary[tag].Enqueue(objectToSpawn);
-            return objectToSpawn;
+                objectToSpawn.transform.position = position;
+                objectToSpawn.transform.rotation = rotation;
+
+                pooledDictionary[tag].Enqueue(objectToSpawn);
+                return objectToSpawn;
+            }
+            else
+            {
+                Debug.Log("Pool object not active " + tag);
+                pooledDictionary[tag].Enqueue(objectToSpawn);
+                return null;
+            }
         }
         else
         {
-            Debug.Log("Pool doesnt excist " + tag);
+            Debug.Log("Pool doesnt exist " + tag);
             return null;
         }
     }
