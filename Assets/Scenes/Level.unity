@@ -11017,7 +11017,6 @@ GameObject:
   - component: {fileID: 1049768649}
   - component: {fileID: 1049768650}
   - component: {fileID: 1049768651}
-  - component: {fileID: 1049768652}
   - component: {fileID: 1049768653}
   - component: {fileID: 1049768655}
   m_Layer: 0
@@ -11043,6 +11042,7 @@ Transform:
   - {fileID: 1317550093}
   - {fileID: 705507995}
   - {fileID: 1269665772}
+  - {fileID: 1724821336}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1049768649
@@ -11105,20 +11105,6 @@ MonoBehaviour:
   cannonTower: {fileID: 3680463821713200747, guid: d2ea690f67a7e3a41936d1e980faff3b, type: 3}
   magicTower: {fileID: 6034089078044123391, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
   noTower: {fileID: 1323802190}
---- !u!114 &1049768652
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049768647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d923ffb9bc13b8540802bb9f4be28ce4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upgradesPannel: {fileID: 58392003}
-  towerPannel: {fileID: 510756644}
 --- !u!114 &1049768653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18066,6 +18052,52 @@ Transform:
   - {fileID: 1871012087}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1724821335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1724821336}
+  - component: {fileID: 1724821337}
+  m_Layer: 0
+  m_Name: ButtonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1724821336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724821335}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1049768648}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1724821337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724821335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d923ffb9bc13b8540802bb9f4be28ce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradesPannel: {fileID: 1714206603278299626, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
+  towerPannel: {fileID: 510756644}
 --- !u!43 &1756461558
 Mesh:
   m_ObjectHideFlags: 0
@@ -23887,7 +23919,7 @@ PrefabInstance:
     - target: {fileID: 2497910684898407060, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1049768652}
+      objectReference: {fileID: 0}
     - target: {fileID: 2497910684898407060, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SellTower
@@ -23983,10 +24015,14 @@ PrefabInstance:
     - target: {fileID: 5922521599059663142, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1049768652}
+      objectReference: {fileID: 1724821337}
     - target: {fileID: 5922521599059663142, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5922521599059663142, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseUpgradesPannel
       objectReference: {fileID: 0}
     - target: {fileID: 5922521599059663142, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

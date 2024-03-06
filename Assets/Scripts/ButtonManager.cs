@@ -15,4 +15,13 @@ public class ButtonManager : MonoBehaviour
     {
 
     }
+
+    public void UpgradePower()
+    {
+        
+    }
+    public void UpgradeRange()
+    {
+
+    }
 }
