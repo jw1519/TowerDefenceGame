@@ -13,11 +13,6 @@ public class ChangeUIColour : MonoBehaviour
     public Color CantUseButton = Color.red;
     public Color CanUseButton = Color.green;
 
-    private void Awake()
-    {
-
-    }
-
     private void Update()
     {
         if (Gold.instance.GoldAmount < 500)
