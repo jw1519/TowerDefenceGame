@@ -27,7 +27,7 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < WaveNumber; i++)
         {
             SpawnEnemy();
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(20f);
         }
         WaveNumber++;
     }
