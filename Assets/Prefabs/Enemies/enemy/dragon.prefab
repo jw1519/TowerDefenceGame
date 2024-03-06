@@ -298,7 +298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 088f17ce9a2fe8942bb6232894277f7c, type: 3}
       propertyPath: m_TagString
-      value: Dragon
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 1125421596319804855, guid: 088f17ce9a2fe8942bb6232894277f7c, type: 3}
       propertyPath: m_Layer
