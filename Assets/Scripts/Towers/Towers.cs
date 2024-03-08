@@ -16,7 +16,7 @@ public class Towers : MonoBehaviour
 
     [Header("Changes")]
 
-    public float range = 100f;
+    public float Range = 100f;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
     public int Damage = 1;
@@ -48,7 +48,7 @@ public class Towers : MonoBehaviour
             }
         }
 
-        if (nearestEnemy != null && shortestDistance <= range) //if enemy is found within the range
+        if (nearestEnemy != null && shortestDistance <= Range) //if enemy is found within the range
         {
             target = nearestEnemy.transform;
         }
@@ -124,6 +124,6 @@ public class Towers : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, range);
+        Gizmos.DrawWireSphere(transform.position, Range);
     }
 }

@@ -16,7 +16,6 @@ public class Gold : MonoBehaviour
     {
         instance = this;
     }
-
     public void IncreaseGold()
     {
         GoldAmount = GoldAmount + 10;

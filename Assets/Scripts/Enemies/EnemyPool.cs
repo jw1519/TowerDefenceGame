@@ -50,8 +50,6 @@ public class EnemyPool : MonoBehaviour
             GameObject objectToSpawn = pooledDictionary[tag].Dequeue();
             if (!objectToSpawn.activeInHierarchy)
             {
-
-            
                 objectToSpawn.SetActive(true);
 
                 objectToSpawn.transform.position = position;

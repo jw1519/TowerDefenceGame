@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   enemyTag: Enemy
-  range: 40
+  Range: 50
   fireRate: 2
   Damage: 1
   firePoint: {fileID: 5269943160761478159}
