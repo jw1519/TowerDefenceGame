@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class PlacementManager : MonoBehaviour
 {
+    public float opacity = 0.5f;
     public Color hoverColor;
     public Vector3 TowerOffset;
     public GameObject upgradesPannel;
@@ -53,8 +54,21 @@ public class PlacementManager : MonoBehaviour
     // when hoving over a tile
     void OnMouseEnter()
     {
-        if(UITest.IsOverPannel == false)
+        GameObject Tower = BuildManager.instance.GetTowerToBuild();
+        Renderer renderer = Tower.GetComponent<Renderer>();
+
+        if (UITest.IsOverPannel == false)
              rend.material.color = hoverColor;
+        //have a tower appear when hover
+        //if (Tower != BuildManager.instance.noTower)
+        //{
+        //    if (renderer != null && renderer.material != null)
+        //    {
+        //        Color color = renderer.sharedMaterial.color;
+        //        color.a = opacity;
+        //        renderer.material.color = color;
+        //    }
+        //}
     }
     private void OnMouseExit()
     {
