@@ -687,6 +687,63 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &114505504
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6034089078044123391, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
+      propertyPath: m_Name
+      value: MagicTower
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410509751063558725, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -107.62268
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410509751063558725, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410509751063558725, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 50.384144
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410509751063558725, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410509751063558725, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410509751063558725, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410509751063558725, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410509751063558725, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410509751063558725, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6410509751063558725, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
 --- !u!1001 &126115508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9991,13 +10048,13 @@ MonoBehaviour:
   pools:
   - tag: Enemy
     objectToPool: {fileID: 8281402486344401579, guid: 83d9b449885654f4ebf518d32697183a, type: 3}
-    amountToPool: 1
+    amountToPool: 100
   - tag: Knight
     objectToPool: {fileID: 5817570455017297791, guid: 13aa4950f54b1dc4bbb5fe896a3b4731, type: 3}
-    amountToPool: 1
+    amountToPool: 100
   - tag: Dragon
     objectToPool: {fileID: 7454279467243001119, guid: 405128f22b859534eb6964c671d32124, type: 3}
-    amountToPool: 1
+    amountToPool: 100
 --- !u!114 &1049768655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10487,7 +10544,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3803344880040738893, guid: 5f260e6c38323984da64be915645a87b, type: 3}
       propertyPath: m_text
-      value: 'Gold: 200'
+      value: 'Gold: 300
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3803344880040738893, guid: 5f260e6c38323984da64be915645a87b, type: 3}
       propertyPath: m_margin.z
@@ -10785,7 +10844,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 70b800032a2970f488c33997f763c305, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
@@ -24229,3 +24288,4 @@ SceneRoots:
   - {fileID: 1633091099}
   - {fileID: 1111431899}
   - {fileID: 533855304}
+  - {fileID: 114505504}

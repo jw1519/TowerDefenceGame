@@ -8,7 +8,10 @@ public class Towers : MonoBehaviour
 {
 
     public Transform target;
-    
+
+    public AudioSource ShootSound;
+
+
 
     //public Transform PartToRotate;
 
@@ -90,6 +93,7 @@ public class Towers : MonoBehaviour
             if (projectiles != null)
             {
                 projectiles.Seek(target);
+                ShootSound.Play();
             }
         }
         if (CompareTag("ArcherTower"))
@@ -103,6 +107,8 @@ public class Towers : MonoBehaviour
             if (projectiles != null)
             {
                 projectiles.Seek(target);
+                if (ShootSound != null)
+                    ShootSound.Play();
             }
         }
         if (this.CompareTag("MagicTower"))
@@ -116,6 +122,7 @@ public class Towers : MonoBehaviour
             if (projectiles != null)
             {
                 projectiles.Seek(target);
+                ShootSound.Play();
             }
         }
     }
