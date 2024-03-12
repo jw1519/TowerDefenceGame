@@ -6,6 +6,9 @@ public class ButtonManager : MonoBehaviour
 {
     public GameObject upgradesPannel;
     public GameObject towerPannel;
+
+    int powerUpgradeCost = 200;
+    int RangeUpgradeCost = 100;
     public void CloseUpgradesPannel()
     {
         towerPannel.SetActive(true);
@@ -18,10 +21,18 @@ public class ButtonManager : MonoBehaviour
 
     public void UpgradePower()
     {
+        if (Gold.instance.GoldAmount >= powerUpgradeCost)
+        {
+
+            powerUpgradeCost += 200;
+        }
         
     }
     public void UpgradeRange()
     {
+        if (Gold.instance.GoldAmount >= RangeUpgradeCost)
+        {
 
+        }
     }
 }

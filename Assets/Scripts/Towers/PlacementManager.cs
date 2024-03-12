@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class PlacementManager : MonoBehaviour
 {
-    public float opacity = 0.5f;
+    //public float opacity = 0.5f;
     public Color hoverColor;
     public Vector3 TowerOffset;
     public GameObject upgradesPannel;
@@ -35,6 +35,7 @@ public class PlacementManager : MonoBehaviour
                 towerPannel.SetActive(false);
                 upgradesPannel.SetActive(true);
                 return;
+                
             }
 
             GameObject Tower = BuildManager.instance.GetTowerToBuild();
@@ -59,7 +60,7 @@ public class PlacementManager : MonoBehaviour
 
         if (UITest.IsOverPannel == false)
              rend.material.color = hoverColor;
-        //have a tower appear when hover
+        //have a tower appear when hover so then can rotate
         //if (Tower != BuildManager.instance.noTower)
         //{
         //    if (renderer != null && renderer.material != null)
