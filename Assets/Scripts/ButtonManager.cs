@@ -43,4 +43,15 @@ public class ButtonManager : MonoBehaviour
             RangeCostText.SetText($"Range- {RangeUpgradeCost}");
         }
     }
+    public void OnDoubleDamageButtonPress()
+    {
+        //Towers do double damage for 10 sec
+
+
+    }
+    public void OnFreezeButtonPressed()
+    {
+        //Enemy Freeze for 10sec
+        //Freeze = EnemyNavigation.instance
+    }
 }

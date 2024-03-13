@@ -18,7 +18,7 @@ public class Gold : MonoBehaviour
     }
     public void IncreaseGold()
     {
-        GoldAmount = GoldAmount + 10;
+        GoldAmount = GoldAmount + 25;
         goldText.SetText("Gold: " + GoldAmount);
         TotalGoldEarned = TotalGoldEarned + 25;
     }
