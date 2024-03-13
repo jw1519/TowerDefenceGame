@@ -2978,7 +2978,7 @@ GameObject:
   - component: {fileID: 351179740}
   m_Layer: 0
   m_Name: Enemies
-  m_TagString: Enemy
+  m_TagString: EnemiesParent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9985,10 +9985,10 @@ MonoBehaviour:
     amountToPool: 100
   - tag: Knight
     objectToPool: {fileID: 5817570455017297791, guid: 13aa4950f54b1dc4bbb5fe896a3b4731, type: 3}
-    amountToPool: 50
+    amountToPool: 100
   - tag: Dragon
     objectToPool: {fileID: 7454279467243001119, guid: 405128f22b859534eb6964c671d32124, type: 3}
-    amountToPool: 5
+    amountToPool: 100
 --- !u!114 &1049768655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17819,6 +17819,7 @@ MonoBehaviour:
   towerPannel: {fileID: 510756644}
   PowerCostText: {fileID: 5926443096650851077}
   RangeCostText: {fileID: 5926443096650851076}
+  EnemiesList: []
 --- !u!1001 &1757211255
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -9,10 +11,15 @@ public class ButtonManager : MonoBehaviour
     public GameObject towerPannel;
     public TextMeshProUGUI PowerCostText;
     public TextMeshProUGUI RangeCostText;
-    public Transform EnemiesList;
+
+    public string enemyTag = "Enemy";
 
     int powerUpgradeCost = 200;
     int RangeUpgradeCost = 100;
+
+
+    
+
     public void CloseUpgradesPannel()
     {
         towerPannel.SetActive(true);
@@ -52,10 +59,22 @@ public class ButtonManager : MonoBehaviour
     }
     public void OnFreezeButtonPressed()
     {
-        EnemiesList.transform.position = EnemiesList.transform.position;
-        //Enemy Freeze for 10sec
-        //Freeze = EnemyNavigation.instance
+        StartCoroutine(FreezeEnemiesForDuration());
 
+    }
+    IEnumerator FreezeEnemiesForDuration()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
 
+        foreach (GameObject child in enemies)
+        {
+            NavMeshAgent navMeshAgent = child.GetComponent<NavMeshAgent>();
+            if (navMeshAgent != null)
+            {
+                navMeshAgent.enabled = false;
+                yield return new WaitForSeconds(60f);
+                navMeshAgent.enabled = true;
+            }
+        }
     }
 }

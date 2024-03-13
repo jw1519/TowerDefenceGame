@@ -18,6 +18,7 @@ TagManager:
   - Path
   - Dragon
   - Knight
+  - EnemiesParent
   layers:
   - Default
   - TransparentFX
