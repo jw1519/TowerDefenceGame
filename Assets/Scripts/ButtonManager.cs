@@ -38,7 +38,7 @@ public class ButtonManager : MonoBehaviour
         {
 
             RangeUpgradeCost += 100;
-            RangeCostText.SetText($"Range- {RangeCostText}");
+            RangeCostText.SetText($"Range- {RangeUpgradeCost}");
         }
     }
 }
