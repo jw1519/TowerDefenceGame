@@ -11,8 +11,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject towerPannel;
     public TextMeshProUGUI PowerCostText;
     public TextMeshProUGUI RangeCostText;
-
-    public string enemyTag = "Enemy";
+    public GameObject[] EnemiesList;
 
     int powerUpgradeCost = 200;
     int RangeUpgradeCost = 100;
@@ -64,17 +63,24 @@ public class ButtonManager : MonoBehaviour
     }
     IEnumerator FreezeEnemiesForDuration()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
-
-        foreach (GameObject child in enemies)
+        foreach (GameObject child in EnemiesList)
         {
             NavMeshAgent navMeshAgent = child.GetComponent<NavMeshAgent>();
             if (navMeshAgent != null)
             {
                 navMeshAgent.enabled = false;
-                yield return new WaitForSeconds(60f);
+            }
+            
+        }
+        yield return new WaitForSeconds(10f);
+        foreach (GameObject child in EnemiesList)
+        {
+            NavMeshAgent navMeshAgent = child.GetComponent<NavMeshAgent>();
+            if (navMeshAgent != null)
+            {
                 navMeshAgent.enabled = true;
             }
+
         }
     }
 }
