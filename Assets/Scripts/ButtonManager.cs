@@ -9,6 +9,7 @@ public class ButtonManager : MonoBehaviour
     public GameObject towerPannel;
     public TextMeshProUGUI PowerCostText;
     public TextMeshProUGUI RangeCostText;
+    public Transform EnemiesList;
 
     int powerUpgradeCost = 200;
     int RangeUpgradeCost = 100;
@@ -51,7 +52,10 @@ public class ButtonManager : MonoBehaviour
     }
     public void OnFreezeButtonPressed()
     {
+        EnemiesList.transform.position = EnemiesList.transform.position;
         //Enemy Freeze for 10sec
         //Freeze = EnemyNavigation.instance
+
+
     }
 }

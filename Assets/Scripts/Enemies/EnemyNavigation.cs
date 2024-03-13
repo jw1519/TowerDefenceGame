@@ -21,6 +21,8 @@ public class EnemyNavigation : MonoBehaviour
     int ArrowPower = 10;
     int MagicPower = 25;
 
+    
+
     private void Awake()
     {
         enemy = GetComponent<NavMeshAgent>();
