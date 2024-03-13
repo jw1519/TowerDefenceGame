@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ButtonManager : MonoBehaviour
 {
     public GameObject upgradesPannel;
     public GameObject towerPannel;
+    public TextMeshProUGUI PowerCostText;
+    public TextMeshProUGUI RangeCostText;
 
     int powerUpgradeCost = 200;
     int RangeUpgradeCost = 100;
@@ -25,6 +28,7 @@ public class ButtonManager : MonoBehaviour
         {
 
             powerUpgradeCost += 200;
+            PowerCostText.SetText($"Power- {powerUpgradeCost}");
         }
         
     }
@@ -33,6 +37,8 @@ public class ButtonManager : MonoBehaviour
         if (Gold.instance.GoldAmount >= RangeUpgradeCost)
         {
 
+            RangeUpgradeCost += 100;
+            RangeCostText.SetText($"Range- {RangeCostText}");
         }
     }
 }
