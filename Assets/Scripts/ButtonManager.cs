@@ -27,6 +27,7 @@ public class ButtonManager : MonoBehaviour
         if (Gold.instance.GoldAmount >= powerUpgradeCost)
         {
 
+            //Gold.instance.GoldAmount -= powerUpgradeCost;
             powerUpgradeCost += 200;
             PowerCostText.SetText($"Power- {powerUpgradeCost}");
         }
@@ -37,6 +38,7 @@ public class ButtonManager : MonoBehaviour
         if (Gold.instance.GoldAmount >= RangeUpgradeCost)
         {
 
+            //Gold.instance.GoldAmount -= RangeUpgradeCost;
             RangeUpgradeCost += 100;
             RangeCostText.SetText($"Range- {RangeUpgradeCost}");
         }

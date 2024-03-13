@@ -20,7 +20,7 @@ public class Gold : MonoBehaviour
     {
         GoldAmount = GoldAmount + 10;
         goldText.SetText("Gold: " + GoldAmount);
-        TotalGoldEarned = TotalGoldEarned + 10;
+        TotalGoldEarned = TotalGoldEarned + 25;
     }
     public void DecreaseGold()
     {
