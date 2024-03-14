@@ -7,13 +7,13 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     public TextMeshProUGUI healthText;
-    public int health = 100;
+    public int health = 10;
    
     // Start is called before the first frame update
     void Start()
     {
         healthText.GetComponent<TextMeshProUGUI>();
-        health = 100;
+        health = 10;
         healthText.SetText($"Health: {health}");
     }
 
