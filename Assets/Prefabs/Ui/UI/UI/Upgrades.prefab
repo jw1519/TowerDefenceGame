@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 474683148886080549}
   - component: {fileID: 4372213099912111388}
   m_Layer: 5
-  m_Name: Upgrades
+  m_Name: UpgradesText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 280329807690683866}
   - component: {fileID: 116711846673151424}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BackText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -774,7 +774,7 @@ GameObject:
   - component: {fileID: 3862922660938334912}
   - component: {fileID: 4021679041262966174}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SellText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 3650415349608975800}
   - component: {fileID: 9161892976678527931}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: RangeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1042,7 +1042,7 @@ GameObject:
   - component: {fileID: 1544520401657930774}
   - component: {fileID: 5007027562083036162}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: PowerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
