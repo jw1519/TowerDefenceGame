@@ -8,10 +8,12 @@ public class Towers : MonoBehaviour
 {
 
     public Transform target;
-
     public AudioSource ShootSound;
 
+    private Renderer rend;
 
+    public Material hoverColor;
+    public Material OriginalMaterial;
 
     //public Transform PartToRotate;
 
@@ -30,6 +32,7 @@ public class Towers : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        rend = GetComponent<Renderer>();
         
     }
 
@@ -128,9 +131,18 @@ public class Towers : MonoBehaviour
     }
 
     //creates a radius that is shown when the tower is selected this is only in editor
-    private void OnDrawGizmosSelected()
+    void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, Range);
+    }
+
+    private void OnMouseEnter()
+    {
+       rend.material = hoverColor;
+    }
+    private void OnMouseExit()
+    {
+        rend.material = OriginalMaterial;
     }
 }

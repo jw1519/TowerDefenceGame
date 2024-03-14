@@ -112,6 +112,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a41eea55d3ad614409fded315d8a589c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8566469137720777640}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a41eea55d3ad614409fded315d8a589c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 731955414649251137}
   m_SourcePrefab: {fileID: 100100000, guid: a41eea55d3ad614409fded315d8a589c, type: 3}
 --- !u!1 &3680463821713200747 stripped
 GameObject:
@@ -132,6 +135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   ShootSound: {fileID: 8566469137720777640}
+  hoverColor: {fileID: 2100000, guid: 6fbcc4243a9a5cc4780ccae01533ca38, type: 2}
+  OriginalMaterial: {fileID: -5682177726514902387, guid: a41eea55d3ad614409fded315d8a589c, type: 3}
   enemyTag: Enemy
   Range: 50
   fireRate: 1
@@ -234,6 +239,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &731955414649251137
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3680463821713200747}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.041656, y: 14.879928, z: 6.0258455}
+  m_Center: {x: -0.004337311, y: 7.390491, z: -0.0092304945}
 --- !u!4 &4060121456763473105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a41eea55d3ad614409fded315d8a589c, type: 3}

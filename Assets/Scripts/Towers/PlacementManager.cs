@@ -56,20 +56,11 @@ public class PlacementManager : MonoBehaviour
     void OnMouseEnter()
     {
         GameObject Tower = BuildManager.instance.GetTowerToBuild();
-        Renderer renderer = Tower.GetComponent<Renderer>();
-
-        if (UITest.IsOverPannel == false)
-             rend.material.color = hoverColor;
-        //have a tower appear when hover so then can rotate
-        //if (Tower != BuildManager.instance.noTower)
-        //{
-        //    if (renderer != null && renderer.material != null)
-        //    {
-        //        Color color = renderer.sharedMaterial.color;
-        //        color.a = opacity;
-        //        renderer.material.color = color;
-        //    }
-        //}
+        if (Tower != BuildManager.instance.noTower)
+        {
+            if (UITest.IsOverPannel == false)
+                rend.material.color = hoverColor;
+        }
     }
     private void OnMouseExit()
     {
