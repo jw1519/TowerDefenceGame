@@ -6,20 +6,22 @@ using UnityEngine;
 
 public class Towers : MonoBehaviour
 {
-
-    public Transform target;
+    public string enemyTag = "Enemy";
+    private Transform target;
+    [Header("Sound")]
     public AudioSource ShootSound;
 
-    private Renderer rend;
-
+    [Header("Tower Hover Elements")]
     public Material hoverColor;
     public Material OriginalMaterial;
+    private Renderer rend;
+    
+    [Header("UI Elements")]
+    public GameObject upgradesPannel;
+    public GameObject towerPannel;
 
     //public Transform PartToRotate;
-
-    public string enemyTag = "Enemy";
-
-    [Header("Changes")]
+    [Header("Upgradable")]
 
     public float Range = 100f;
     public float fireRate = 1f;
@@ -144,5 +146,11 @@ public class Towers : MonoBehaviour
     private void OnMouseExit()
     {
         rend.material = OriginalMaterial;
+    }
+    private void OnMouseDown()
+    {
+        towerPannel.SetActive(false);
+        upgradesPannel.SetActive(true);
+
     }
 }
