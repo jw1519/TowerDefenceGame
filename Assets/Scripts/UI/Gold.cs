@@ -2,23 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gold : MonoBehaviour
 {
     public TextMeshProUGUI goldText;
     public static Gold instance;
 
-    public TextMeshProUGUI TotalGoldText;
-
     public int GoldAmount = 200;
 
-    private int TotalGoldEarned = 0; // shows how much gold was earned once the game is over
+    public static int TotalGoldEarned = 0; // shows how much gold was earned once the game is over
 
     void Awake()
     {
         instance = this;
+        TotalGoldEarned = 0;
     }
-
     public void IncreaseGold()
     {
         GoldAmount = GoldAmount + 25;
