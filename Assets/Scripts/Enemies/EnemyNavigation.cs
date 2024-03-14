@@ -55,7 +55,6 @@ public class EnemyNavigation : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("hit");
         if (other.gameObject.CompareTag("CannonBall"))
         {
             health = health - CannonBallPower;
