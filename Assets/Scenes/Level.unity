@@ -22942,6 +22942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowersPannel
       objectReference: {fileID: 0}
+    - target: {fileID: 7046611016844827720, guid: eac58ab8edb0b9d46a4b53b98d46cf78, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

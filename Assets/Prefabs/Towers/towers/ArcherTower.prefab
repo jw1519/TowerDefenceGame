@@ -165,7 +165,7 @@ MonoBehaviour:
   hoverColor: {fileID: 2100000, guid: 6fbcc4243a9a5cc4780ccae01533ca38, type: 2}
   OriginalMaterial: {fileID: -5682177726514902387, guid: 0c34666a499fd0d4e84f2e44eb0c3f8f, type: 3}
   upgradesPannel: {fileID: 1714206603278299626, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
-  towerPannel: {fileID: 764218891350126267, guid: 699f8c2f2399dc24589c9140602f08e8, type: 3}
+  towerPannel: {fileID: 7046611016844827720, guid: eac58ab8edb0b9d46a4b53b98d46cf78, type: 3}
   Range: 60
   fireRate: 1.5
   Damage: 1
