@@ -3,16 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverButtonManager : MonoBehaviour
+public class StartButton : MonoBehaviour
 {
-
-    public void PressRetry()
+    public void StartGame()
     {
         SceneManager.LoadScene("Level");
     }
-    public void Quit()
-    {
-        
-    }
-
 }
