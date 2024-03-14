@@ -55,12 +55,8 @@ public class PlacementManager : MonoBehaviour
     // when hoving over a tile
     void OnMouseEnter()
     {
-        GameObject Tower = BuildManager.instance.GetTowerToBuild();
-        if (Tower != BuildManager.instance.noTower)
-        {
-            if (UITest.IsOverPannel == false)
-                rend.material.color = hoverColor;
-        }
+        if (UITest.IsOverPannel == false)
+            rend.material.color = hoverColor;
     }
     private void OnMouseExit()
     {
@@ -69,7 +65,8 @@ public class PlacementManager : MonoBehaviour
 
     private void PlayAudio()
     {
-        if (CantDoThat != null)
-            CantDoThat.Play();
+      if (UITest.IsOverPannel == false)
+         if (CantDoThat != null)
+             CantDoThat.Play();
     }
 }
