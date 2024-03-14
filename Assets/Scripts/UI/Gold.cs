@@ -8,7 +8,6 @@ public class Gold : MonoBehaviour
 {
     public TextMeshProUGUI goldText;
     public static Gold instance;
-
     public int GoldAmount = 200;
 
     public static int TotalGoldEarned = 0; // shows how much gold was earned once the game is over
