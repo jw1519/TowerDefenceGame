@@ -167,7 +167,7 @@ MonoBehaviour:
   upgradesPannel: {fileID: 1714206603278299626, guid: e12d4dc4adef3274a8f0244aefb27f8e, type: 3}
   towerPannel: {fileID: 7046611016844827720, guid: eac58ab8edb0b9d46a4b53b98d46cf78, type: 3}
   Range: 60
-  fireRate: 1.5
+  fireRate: 1.3
   Damage: 1
   firePoint: {fileID: 5522239147620266204}
   ProjectilePrefab: {fileID: 6876707946873665200, guid: 8f97a1d959d160a4f95a723db4f07f8b, type: 3}

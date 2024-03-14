@@ -151,6 +151,7 @@ public class Towers : MonoBehaviour
     {
         towerPannel.SetActive(false);
         upgradesPannel.SetActive(true);
+        return;
 
     }
 }
