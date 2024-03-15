@@ -11,20 +11,24 @@ public class TowertSelectionManager : MonoBehaviour
         instance = this;
     }
 
-    private bool isTowerSelected;
     private SelectableObject selectedTower;
 
     public void SelectTower(SelectableObject tower)
     {
-        if (selectedTower != null)
+        if (instance != null)
         {
-            selectedTower.Deselect();
+            SelectableObject.instance.Deselect();
         }
-        selectedTower = tower;
-        selectedTower.Select();
+        //selecet tower
+        SelectableObject.instance = tower;
+        SelectableObject.instance.Select();
     }
     public void DeselectTower()
     {
-
+        if (SelectableObject.instance != null)
+        {
+            SelectableObject.instance.Deselect();
+            SelectableObject.instance = null;
+        }
     }
 }
