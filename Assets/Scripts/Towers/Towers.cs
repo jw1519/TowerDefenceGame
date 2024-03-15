@@ -15,6 +15,7 @@ public class Towers : MonoBehaviour
     public Material hoverColor;
     public Material OriginalMaterial;
     private Renderer rend;
+    private bool isSelected;
     
     [Header("UI Elements")]
     public GameObject upgradesPannel;
@@ -83,6 +84,15 @@ public class Towers : MonoBehaviour
             }
         }
         fireCountdown -= Time.deltaTime;
+
+        if (isSelected == true)
+        {
+            rend.material = hoverColor;
+        }
+        else
+        {
+            rend.material = OriginalMaterial;
+        }
     }
    
     public void Shoot()
@@ -139,19 +149,21 @@ public class Towers : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, Range);
     }
 
-    private void OnMouseEnter()
-    {
-       rend.material = hoverColor;
-    }
-    private void OnMouseExit()
-    {
-        rend.material = OriginalMaterial;
-    }
+    //private void OnMouseEnter()
+    //{
+    //   rend.material = hoverColor;
+    //}
+    //private void OnMouseExit()
+    //{
+    //    rend.material = OriginalMaterial;
+    //}
     private void OnMouseDown()
-    {
+    { 
+        isSelected = true;
         towerPannel.SetActive(false);
         upgradesPannel.SetActive(true);
         return;
 
     }
+    
 }

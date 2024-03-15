@@ -9,6 +9,8 @@ public class PlacementManager : MonoBehaviour
     //public float opacity = 0.5f;
     public Color hoverColor;
     public Vector3 TowerOffset;
+
+    [Header("UI Pannels")]
     public GameObject upgradesPannel;
     public GameObject towerPannel;
 
