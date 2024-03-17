@@ -17,9 +17,6 @@ public class Towers : MonoBehaviour
     private Renderer rend;
     private bool isSelected;
     
-    [Header("UI Elements")]
-    public GameObject upgradesPannel;
-    public GameObject towerPannel;
 
     //public Transform PartToRotate;
     [Header("Upgradable")]
@@ -157,13 +154,5 @@ public class Towers : MonoBehaviour
     //{
     //    rend.material = OriginalMaterial;
     //}
-    private void OnMouseDown()
-    { 
-        isSelected = true;
-        towerPannel.SetActive(false);
-        upgradesPannel.SetActive(true);
-        return;
-
-    }
     
 }

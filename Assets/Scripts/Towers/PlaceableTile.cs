@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PlacementManager : MonoBehaviour
+public class PlaceableTile : MonoBehaviour
 {
     //public float opacity = 0.5f;
     public Color hoverColor;
@@ -36,6 +36,7 @@ public class PlacementManager : MonoBehaviour
             {
                 towerPannel.SetActive(false);
                 upgradesPannel.SetActive(true);
+                BuildManager.instance.SelectTower(this);
                 return;
                 
             }

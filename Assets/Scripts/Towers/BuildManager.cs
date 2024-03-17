@@ -20,6 +20,8 @@ public class BuildManager : MonoBehaviour
     public GameObject magicTower;
     public GameObject noTower;
 
+    private PlaceableTile selectedTower;
+
 
     private void Start()
     {
@@ -56,5 +58,11 @@ public class BuildManager : MonoBehaviour
     public void SetNoTower()
     {
         towerToBuild = noTower;
+        selectedTower = null;
+    }
+    public void SelectTower(PlaceableTile Tile) 
+    {
+        selectedTower = Tile;
+        towerToBuild = null;
     }
 }
