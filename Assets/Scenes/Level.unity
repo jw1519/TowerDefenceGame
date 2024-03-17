@@ -1086,7 +1086,7 @@ GameObject:
   - component: {fileID: 133940515}
   - component: {fileID: 133940514}
   - component: {fileID: 133940513}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9793,6 +9793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd72d3ec43cc974a9e56682957a6beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedTower: {fileID: 0}
 --- !u!114 &919105459 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7106585336699532092, guid: c3a0b81a84062634b9122e56fe341a6e, type: 3}
@@ -15903,7 +15904,7 @@ GameObject:
   - component: {fileID: 1439356291}
   - component: {fileID: 1439356293}
   - component: {fileID: 1439356292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18308,7 +18309,7 @@ GameObject:
   - component: {fileID: 1670427076}
   - component: {fileID: 1670427078}
   - component: {fileID: 1670427077}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18740,7 +18741,7 @@ GameObject:
   - component: {fileID: 1760420149}
   - component: {fileID: 1760420148}
   - component: {fileID: 1760420147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Button (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21359,7 +21360,7 @@ GameObject:
   - component: {fileID: 1932315898}
   - component: {fileID: 1932315900}
   - component: {fileID: 1932315899}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21496,7 +21497,7 @@ GameObject:
   - component: {fileID: 1933484231}
   - component: {fileID: 1933484230}
   - component: {fileID: 1933484229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}

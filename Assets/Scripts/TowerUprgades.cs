@@ -27,8 +27,13 @@ public class TowerUprgades : MonoBehaviour
     }
     public void Upgrade()
     {
+        Debug.Log("press");
         targetTile.UpgradeTower();
         BuildManager.instance.DeselectTower();
     }
 
+    public void sell()
+    {
+
+    }
 }

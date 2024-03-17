@@ -79,8 +79,8 @@ public class PlaceableTile : MonoBehaviour
             //destroy old turret
             Destroy(tower);
 
-            tower = (GameObject)Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
-            BuildManager.instance.SetNoTower();
+            //tower = (GameObject)Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
+            //BuildManager.instance.SetNoTower();
         }
         isUpgraded = true;
     }
