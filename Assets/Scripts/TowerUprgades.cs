@@ -25,5 +25,9 @@ public class TowerUprgades : MonoBehaviour
     {
         ui.SetActive(false);
     }
+    public void Upgrade()
+    {
+        targetTile.UpgradeTower();
+    }
 
 }

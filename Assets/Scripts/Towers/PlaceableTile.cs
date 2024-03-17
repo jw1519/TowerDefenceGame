@@ -6,17 +6,17 @@ using UnityEngine.EventSystems;
 
 public class PlaceableTile : MonoBehaviour
 {
-    //public float opacity = 0.5f;
     public Color hoverColor;
     public Vector3 TowerOffset;
 
-    [Header("UI Pannels")]
-    public GameObject upgradesPannel;
-    public GameObject towerPannel;
-
     public UITest UITest;
 
-    private GameObject tower;
+    [HideInInspector]
+    public GameObject tower;
+    [HideInInspector]
+    public bool isUpgraded = false;
+    [HideInInspector]
+    public Towers towerblueprint;
 
     private Renderer rend;
     private Color startColor;
@@ -34,13 +34,10 @@ public class PlaceableTile : MonoBehaviour
         {
             if (tower != null)// stops towers on towers add upgrades appear instead
             {
-                towerPannel.SetActive(false);
-                upgradesPannel.SetActive(true);
                 BuildManager.instance.SelectTower(this);
                 return;
                 
             }
-
             GameObject Tower = BuildManager.instance.GetTowerToBuild();
 
             if (Tower != BuildManager.instance.noTower)
@@ -71,5 +68,20 @@ public class PlaceableTile : MonoBehaviour
       if (UITest.IsOverPannel == false)
          if (CantDoThat != null)
              CantDoThat.Play();
+    }
+
+    public void UpgradeTower()
+    {
+        GameObject Tower = BuildManager.instance.GetTowerToBuild();
+
+        if (Tower != BuildManager.instance.noTower)
+        {
+            //destroy old turret
+            Destroy(tower);
+
+            tower = (GameObject)Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
+            BuildManager.instance.SetNoTower();
+        }
+        isUpgraded = true;
     }
 }
