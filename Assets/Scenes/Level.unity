@@ -10792,6 +10792,7 @@ Transform:
   - {fileID: 1724821336}
   - {fileID: 533855304}
   - {fileID: 913303473}
+  - {fileID: 1240837962}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1049768649
@@ -10854,6 +10855,7 @@ MonoBehaviour:
   cannonTower: {fileID: 3680463821713200747, guid: d2ea690f67a7e3a41936d1e980faff3b, type: 3}
   magicTower: {fileID: 6034089078044123391, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
   noTower: {fileID: 1323802190}
+  tileUI: {fileID: 1240837963}
 --- !u!114 &1049768653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13624,6 +13626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1240837962}
+  - component: {fileID: 1240837963}
   m_Layer: 0
   m_Name: TowerUpgradesUI
   m_TagString: Untagged
@@ -13639,14 +13642,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240837961}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -25.214365, y: 14.316388, z: 51.996742}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -56.099693, y: 0.023911476, z: 23.298218}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 708067463}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1049768648}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1240837963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240837961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7df05bd7d306c1b458cf076af75019b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ui: {fileID: 708067462}
 --- !u!1001 &1245333766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26155,7 +26171,6 @@ SceneRoots:
   - {fileID: 8395951383058957934}
   - {fileID: 951147715}
   - {fileID: 1852486819}
-  - {fileID: 1240837962}
   - {fileID: 559170446}
   - {fileID: 351179740}
   - {fileID: 913271089}

@@ -21,6 +21,7 @@ public class BuildManager : MonoBehaviour
     public GameObject noTower;
 
     private PlaceableTile selectedTower;
+    public TowerUprgades tileUI;
 
 
     private void Start()
@@ -29,6 +30,7 @@ public class BuildManager : MonoBehaviour
     }
     public GameObject GetTowerToBuild()
     {
+        TowerUprgades.instance.HideUI();
         return towerToBuild;
     }
     public void GetArcherTower()
@@ -59,10 +61,23 @@ public class BuildManager : MonoBehaviour
     {
         towerToBuild = noTower;
         selectedTower = null;
+        
     }
     public void SelectTower(PlaceableTile Tile) 
     {
+        if (selectedTower == Tile)
+        {
+            DeselectTower();
+            return;
+        }
         selectedTower = Tile;
-        towerToBuild = null;
+        towerToBuild = noTower;
+        tileUI.SetTarget(Tile);
+    }
+
+    public void DeselectTower()
+    {
+        selectedTower = null;
+        TowerUprgades.instance.HideUI();
     }
 }
