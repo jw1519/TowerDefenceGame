@@ -34,6 +34,6 @@ public class TowerUprgades : MonoBehaviour
 
     public void sell()
     {
-
+        BuildManager.instance.DeselectTower();
     }
 }
