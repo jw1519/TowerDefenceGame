@@ -42,8 +42,10 @@ public class PlaceableTile : MonoBehaviour
 
             if (Tower != BuildManager.instance.noTower)
             {
-                tower = (GameObject)Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
+                tower = Instantiate(Tower, transform.position + TowerOffset, transform.rotation); //need to set parent to tile
+
                 BuildManager.instance.SetNoTower();
+                
             }
             else
                 PlayAudio();
