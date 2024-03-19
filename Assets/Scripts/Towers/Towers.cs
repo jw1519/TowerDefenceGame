@@ -15,7 +15,8 @@ public class Towers : MonoBehaviour
     public Material hoverColor;
     public Material OriginalMaterial;
     private Renderer rend;
-    private bool isSelected;
+
+    public bool ShowRange = true;
     
 
     //public Transform PartToRotate;
@@ -71,7 +72,6 @@ public class Towers : MonoBehaviour
         //Vector3 roation = lookRotation.eulerAngles;
         //PartToRotate.rotation = Quaternion.Euler(0f, roation.y, 0f);
 
-
         if (target != null)
         {
             if (fireCountdown <= 0f)
@@ -81,15 +81,6 @@ public class Towers : MonoBehaviour
             }
         }
         fireCountdown -= Time.deltaTime;
-
-        if (isSelected == true)
-        {
-            rend.material = hoverColor;
-        }
-        else
-        {
-            rend.material = OriginalMaterial;
-        }
     }
    
     public void Shoot()
@@ -140,19 +131,9 @@ public class Towers : MonoBehaviour
     }
 
     //creates a radius that is shown when the tower is selected this is only in editor
-    void OnDrawGizmos()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, Range);
     }
-
-    //private void OnMouseEnter()
-    //{
-    //   rend.material = hoverColor;
-    //}
-    //private void OnMouseExit()
-    //{
-    //    rend.material = OriginalMaterial;
-    //}
-    
 }
