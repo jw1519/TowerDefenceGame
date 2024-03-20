@@ -86,4 +86,17 @@ public class BuildManager : MonoBehaviour
         selectedTower = null;
         TowerUprgades.instance.HideUI();
     }
+
+    public void GetUpgradedArcher()
+    {
+        towerToBuild = UpgradedArcherTower;
+    }
+    public void GetUpgradedCannon()
+    {
+        towerToBuild = UpgradedCannonTower;
+    }
+    public void GetUpgradedMagic()
+    {
+        towerToBuild = UpgradedMagicTower;
+    }
 }

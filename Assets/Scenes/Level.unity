@@ -10631,6 +10631,9 @@ MonoBehaviour:
   cannonTower: {fileID: 3680463821713200747, guid: d2ea690f67a7e3a41936d1e980faff3b, type: 3}
   magicTower: {fileID: 6034089078044123391, guid: 05dfb085d73e0dc4e9f253b9c4dc223d, type: 3}
   noTower: {fileID: 1323802190}
+  UpgradedArcherTower: {fileID: 804300980471660643, guid: c42ec065b9f85d24cb50574c15662a7d, type: 3}
+  UpgradedCannonTower: {fileID: 5831287105594443836, guid: 16b17cde3051ec04abbf448d87097d83, type: 3}
+  UpgradedMagicTower: {fileID: 4448933126965251829, guid: a15e2af445b769d4cae1dc67a1b309c5, type: 3}
   tileUI: {fileID: 1240837963}
 --- !u!114 &1049768653
 MonoBehaviour:

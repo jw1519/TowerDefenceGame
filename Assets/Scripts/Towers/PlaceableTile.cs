@@ -74,8 +74,25 @@ public class PlaceableTile : MonoBehaviour
 
     public void UpgradeTower()
     {
+        GameObject child = transform.GetChild(0).gameObject;
+        if (child.CompareTag("ArcherTower")) 
+            BuildManager.instance.GetUpgradedArcher();
+        if (child.CompareTag("CannonTower"))
+            BuildManager.instance.GetUpgradedCannon();
+        if (child.CompareTag("MagicTower"))
+            BuildManager.instance.GetUpgradedMagic();
+
         Destroy(transform.GetChild(0).gameObject);
 
+        GameObject Tower = BuildManager.instance.GetTowerToBuild();
+        if (Tower != BuildManager.instance.noTower)
+        {
+            tower = Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
+            Transform towerTransform = tower.transform;
+            towerTransform.SetParent(transform);
+
+            BuildManager.instance.SetNoTower();
+        }
         isUpgraded = true;
     }
     public void SellTower()
