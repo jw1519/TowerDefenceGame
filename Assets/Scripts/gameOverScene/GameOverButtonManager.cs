@@ -12,15 +12,4 @@ public class GameOverButtonManager : MonoBehaviour
     {
         GoldText.SetText("Total Gold Accumulated " + Gold.TotalGoldEarned);
     }
-    public void PressRetry()
-    {
-        SceneManager.LoadScene("Level");
-    }
-    public void Quit()
-    {
-       Application.Quit();
-       UnityEditor.EditorApplication.isPlaying = false;
-    }
-
-
 }

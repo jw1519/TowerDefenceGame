@@ -129,7 +129,6 @@ public class Towers : MonoBehaviour
             }
         }
     }
-
     //creates a radius that is shown when the tower is selected this is only in editor
     private void OnDrawGizmos()
     {
