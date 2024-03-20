@@ -34,9 +34,7 @@ public class Towers : MonoBehaviour
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
         rend = GetComponent<Renderer>();
-        
     }
-
     //finding enemy and seeing the distance, targeting system
     void UpdateTarget()
     {
