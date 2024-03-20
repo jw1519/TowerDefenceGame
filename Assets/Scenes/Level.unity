@@ -1108,10 +1108,10 @@ RectTransform:
   - {fileID: 1670427076}
   m_Father: {fileID: 1933484228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 52.2725, y: -23.6055}
+  m_SizeDelta: {x: 104.545, y: 47.211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133940513
 MonoBehaviour:
@@ -4687,7 +4687,7 @@ GameObject:
   - component: {fileID: 448116376}
   - component: {fileID: 448116378}
   - component: {fileID: 448116377}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: DoubleDamage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7920,7 +7920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &708067463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11579,7 +11579,7 @@ GameObject:
   - component: {fileID: 1111642878}
   - component: {fileID: 1111642880}
   - component: {fileID: 1111642879}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: Freeze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19018,10 +19018,10 @@ RectTransform:
   - {fileID: 1932315898}
   m_Father: {fileID: 1933484228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 156.8175, y: -23.6055}
+  m_SizeDelta: {x: 104.545, y: 47.211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760420147
 MonoBehaviour:
@@ -25056,9 +25056,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1719265353}
     m_Modifications:
+    - target: {fileID: 458776920332847040, guid: 5be37b52514729c4a83b7f0699abd086, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1135603711668390132, guid: 5be37b52514729c4a83b7f0699abd086, type: 3}
       propertyPath: m_Name
       value: PowerUpsPannel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135603711668390132, guid: 5be37b52514729c4a83b7f0699abd086, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1135603711668390132, guid: 5be37b52514729c4a83b7f0699abd086, type: 3}
+      propertyPath: m_TagString
+      value: Pannel
       objectReference: {fileID: 0}
     - target: {fileID: 5241178293294347804, guid: 5be37b52514729c4a83b7f0699abd086, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -25168,6 +25180,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1724821337}
+    - target: {fileID: 7874260127341898718, guid: 5be37b52514729c4a83b7f0699abd086, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
