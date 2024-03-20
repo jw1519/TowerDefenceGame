@@ -15,10 +15,16 @@ public class BuildManager : MonoBehaviour
 
     [HideInInspector]public GameObject towerToBuild;
 
+    [Header ("Towers")]
     public GameObject archerTower;
     public GameObject cannonTower;
     public GameObject magicTower;
     public GameObject noTower;
+
+    [Header("Upgraded Towers")]
+    public GameObject UpgradedArcherTower;
+    public GameObject UpgradedCannonTower;
+    public GameObject UpgradedMagicTower;
 
     private PlaceableTile selectedTower;
     public TowerUprgades tileUI;
