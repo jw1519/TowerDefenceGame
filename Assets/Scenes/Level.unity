@@ -1087,7 +1087,7 @@ GameObject:
   - component: {fileID: 133940514}
   - component: {fileID: 133940513}
   m_Layer: 8
-  m_Name: Button (2)
+  m_Name: upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1108,10 +1108,10 @@ RectTransform:
   - {fileID: 1670427076}
   m_Father: {fileID: 1933484228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 52.2725, y: -23.6055}
-  m_SizeDelta: {x: 104.545, y: 47.211}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133940513
 MonoBehaviour:
@@ -7920,7 +7920,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &708067463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9826,50 +9826,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &913303472
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 913303473}
-  - component: {fileID: 913303474}
-  m_Layer: 0
-  m_Name: TowerSelectionManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &913303473
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913303472}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -81.984665, y: -569.0681, z: 686.3231}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1049768648}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &913303474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 913303472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dd72d3ec43cc974a9e56682957a6beb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &919105459 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7106585336699532092, guid: c3a0b81a84062634b9122e56fe341a6e, type: 3}
@@ -10612,7 +10568,6 @@ Transform:
   - {fileID: 1269665772}
   - {fileID: 1724821336}
   - {fileID: 533855304}
-  - {fileID: 913303473}
   - {fileID: 1240837962}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19042,7 +18997,7 @@ GameObject:
   - component: {fileID: 1760420148}
   - component: {fileID: 1760420147}
   m_Layer: 8
-  m_Name: Button (1)
+  m_Name: sell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19063,10 +19018,10 @@ RectTransform:
   - {fileID: 1932315898}
   m_Father: {fileID: 1933484228}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 156.8175, y: -23.6055}
-  m_SizeDelta: {x: 104.545, y: 47.211}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760420147
 MonoBehaviour:
