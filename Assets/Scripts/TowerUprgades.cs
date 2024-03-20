@@ -6,7 +6,6 @@ public class TowerUprgades : MonoBehaviour
 {
     public GameObject ui;
     public static TowerUprgades instance;
-    private Transform child;
 
     private void Awake()
     {
@@ -30,8 +29,6 @@ public class TowerUprgades : MonoBehaviour
     {
         if (Gold.instance.GoldAmount >= 0)
         {
-            child = GetComponentInChildren<Transform>();
-            Destroy(child);
             targetTile.UpgradeTower();
             BuildManager.instance.DeselectTower();
             //Gold.instance.GoldAmount -= 200;
@@ -40,8 +37,9 @@ public class TowerUprgades : MonoBehaviour
 
     public void sell()
     {
-
+        targetTile.SellTower();
         BuildManager.instance.DeselectTower();
-        //Gold.instance.GoldAmount += 100;
+        Gold.instance.GoldAmount += 100;
+        Gold.instance.UpdateGold();
     }
 }

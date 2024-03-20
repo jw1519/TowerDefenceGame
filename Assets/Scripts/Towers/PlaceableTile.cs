@@ -15,8 +15,6 @@ public class PlaceableTile : MonoBehaviour
     public GameObject tower;
     [HideInInspector]
     public bool isUpgraded = false;
-    [HideInInspector]
-    public Towers towerblueprint;
 
     private Renderer rend;
     private Color startColor;
@@ -42,7 +40,7 @@ public class PlaceableTile : MonoBehaviour
 
             if (Tower != BuildManager.instance.noTower)
             {
-                tower = Instantiate(Tower, transform.position + TowerOffset, transform.rotation); //need to set parent to tile
+                tower = Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
                 Transform towerTransform = tower.transform;
                 towerTransform.SetParent(transform);
 
@@ -73,18 +71,15 @@ public class PlaceableTile : MonoBehaviour
              CantDoThat.Play();
     }
 
+
     public void UpgradeTower()
     {
-        GameObject Tower = BuildManager.instance.GetTowerToBuild();
+        Destroy(transform.GetChild(0).gameObject);
 
-        if (Tower != BuildManager.instance.noTower)
-        {
-            //destroy old turret
-            Destroy(tower);
-
-            tower = Instantiate(Tower, transform.position + TowerOffset, transform.rotation);
-            BuildManager.instance.SetNoTower();
-        }
         isUpgraded = true;
+    }
+    public void SellTower()
+    {
+        Destroy(transform.GetChild(0).gameObject);
     }
 }
