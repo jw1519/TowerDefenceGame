@@ -72,7 +72,7 @@ public class PlaceableTile : MonoBehaviour
     }
 
 
-    public void UpgradeTower()
+    public void UpgradeTower() // tower swaps with an upgraded version can only happen once so far
     {
         GameObject child = transform.GetChild(0).gameObject;
         if (child.CompareTag("ArcherTower")) 
