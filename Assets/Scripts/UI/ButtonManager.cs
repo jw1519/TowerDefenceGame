@@ -10,8 +10,16 @@ public class ButtonManager : MonoBehaviour
     public GameObject ParentObject;
     public void OnDoubleDamageButtonPress()
     {
-        //Towers do double damage for 10 sec
-
+        if (Gold.instance.GoldAmount >= 100)
+        {
+            Gold.instance.GoldAmount -= 100;
+            EnemyNavigation[] children = ParentObject.GetComponentsInChildren<EnemyNavigation>();
+            foreach (EnemyNavigation child in children)
+            {
+                StartCoroutine(child.DoubleDamageDuration());
+            }
+        }
+        
 
     }
     public void OnFreezeButtonPressed()

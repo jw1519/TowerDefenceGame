@@ -72,11 +72,16 @@ public class EnemyNavigation : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-    public void TakeDoubleDamage()
+    public IEnumerator DoubleDamageDuration()
     {
-        //Towers do double damage
+        Debug.Log("Double Power");
         CannonBallPower = CannonBallPower * 2;
         MagicPower = MagicPower * 2;
         ArrowPower = ArrowPower * 2;
+        yield return new WaitForSeconds(10f);
+        Debug.Log("normal power");
+        CannonBallPower = CannonBallPower / 2;
+        MagicPower = MagicPower / 2;
+        ArrowPower = ArrowPower / 2;
     }
 }
