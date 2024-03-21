@@ -27,11 +27,11 @@ public class TowerUprgades : MonoBehaviour
     }
     public void Upgrade()
     {
-        if (Gold.instance.GoldAmount >= 0)
+        if (Gold.instance.GoldAmount >= 200)
         {
             targetTile.UpgradeTower();
             BuildManager.instance.DeselectTower();
-            //Gold.instance.GoldAmount -= 200;
+            Gold.instance.GoldAmount -= 200;
         }
     }
 
