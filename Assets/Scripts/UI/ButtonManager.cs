@@ -19,8 +19,6 @@ public class ButtonManager : MonoBehaviour
                 StartCoroutine(child.DoubleDamageDuration());
             }
         }
-        
-
     }
     public void OnFreezeButtonPressed()
     {
