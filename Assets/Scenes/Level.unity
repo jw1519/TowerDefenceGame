@@ -19000,11 +19000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d923ffb9bc13b8540802bb9f4be28ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradesPannel: {fileID: 0}
-  towerPannel: {fileID: 1729516727}
-  PowerCostText: {fileID: 0}
-  RangeCostText: {fileID: 0}
-  EnemiesList: []
+  ParentObject: {fileID: 351179739}
 --- !u!1 &1729516727 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7046611016844827720, guid: eac58ab8edb0b9d46a4b53b98d46cf78, type: 3}

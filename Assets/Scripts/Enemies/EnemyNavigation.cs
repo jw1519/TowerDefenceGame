@@ -9,7 +9,7 @@ using UnityEngine.Pool;
 
 public class EnemyNavigation : MonoBehaviour
 {
-    Vector3 navMeshDestination;
+    public Vector3 navMeshDestination;
     public NavMeshAgent enemy;
     public Animator animator;
     public Transform endLocation;

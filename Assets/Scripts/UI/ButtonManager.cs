@@ -7,17 +7,7 @@ using UnityEngine.AI;
 
 public class ButtonManager : MonoBehaviour
 {
-    public GameObject upgradesPannel;
-    public GameObject towerPannel;
-    public TextMeshProUGUI PowerCostText;
-    public TextMeshProUGUI RangeCostText;
-    public GameObject[] EnemiesList;
-
-    public void CloseUpgradesPannel()
-    {
-        towerPannel.SetActive(true);
-        upgradesPannel.SetActive(false);
-    }
+    public GameObject ParentObject;
     public void OnDoubleDamageButtonPress()
     {
         //Towers do double damage for 10 sec
@@ -27,28 +17,30 @@ public class ButtonManager : MonoBehaviour
     public void OnFreezeButtonPressed()
     {
         StartCoroutine(FreezeEnemiesForDuration());
-
     }
     IEnumerator FreezeEnemiesForDuration()
     {
-        foreach (GameObject child in EnemiesList)
+        Transform[] children = ParentObject.GetComponentsInChildren<Transform>();
+
+        foreach (Transform child in children)
         {
-            NavMeshAgent navMeshAgent = child.GetComponent<NavMeshAgent>();
+            NavMeshAgent navMeshAgent = child.GetComponent<NavMeshAgent>();  
             if (navMeshAgent != null)
             {
                 navMeshAgent.enabled = false;
             }
-            
         }
         yield return new WaitForSeconds(10f);
-        foreach (GameObject child in EnemiesList)
+        foreach (Transform child in children)
         {
             NavMeshAgent navMeshAgent = child.GetComponent<NavMeshAgent>();
             if (navMeshAgent != null)
             {
                 navMeshAgent.enabled = true;
-            }
 
+                EnemyNavigation NavigationScript = child.GetComponent<EnemyNavigation>();
+                navMeshAgent.SetDestination(NavigationScript.navMeshDestination);
+            }
         }
     }
 }
