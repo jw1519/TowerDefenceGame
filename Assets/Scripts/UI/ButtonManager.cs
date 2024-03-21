@@ -16,10 +16,12 @@ public class ButtonManager : MonoBehaviour
     }
     public void OnFreezeButtonPressed()
     {
-        StartCoroutine(FreezeEnemiesForDuration());
+        if (Gold.instance.GoldAmount >= 50)
+            StartCoroutine(FreezeEnemiesForDuration());
     }
     IEnumerator FreezeEnemiesForDuration()
     {
+        Gold.instance.GoldAmount -= 50;
         Transform[] children = ParentObject.GetComponentsInChildren<Transform>();
 
         foreach (Transform child in children)
