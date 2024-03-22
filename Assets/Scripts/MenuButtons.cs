@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
+    public GameObject MenuPannel;
+    public GameObject LevelPannel;
     public void LoadMenu()
     {
         SceneManager.LoadScene("Menu");
@@ -17,10 +19,19 @@ public class MenuButtons : MonoBehaviour
     {
         Debug.Log("not yet added");
     }
-
     public void Quit()
     {
         Application.Quit();
         UnityEditor.EditorApplication.isPlaying = false;
+    }
+    public void GoToMenuPannel()
+    {
+        MenuPannel.SetActive(true);
+        LevelPannel.SetActive(false);
+    }
+    public void GoToLevelPannel()
+    {
+        MenuPannel.SetActive(false);
+        LevelPannel.SetActive(true);
     }
 }
