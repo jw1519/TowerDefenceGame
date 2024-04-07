@@ -37,6 +37,7 @@ public class TowerUprgades : MonoBehaviour
         towerRange.SetText($"Range- {targetTowerStats.Range}");
         towerFirerate.SetText($"fireRate- {targetTowerStats.fireRate}");
 
+        //shows the range
         Transform child = target.transform.GetChild(0);
         grandchild = child.transform.GetChild(1);
         grandchild.gameObject.SetActive(true);
