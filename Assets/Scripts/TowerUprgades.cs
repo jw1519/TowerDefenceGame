@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class TowerUprgades : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class TowerUprgades : MonoBehaviour
     }
     private PlaceableTile targetTile;
     private Towers targetTowerStats;
-    private string TowerName;
+    private Transform grandchild;
 
 
     public void SetTarget(PlaceableTile target)
@@ -36,23 +37,16 @@ public class TowerUprgades : MonoBehaviour
         towerRange.SetText($"Range- {targetTowerStats.Range}");
         towerFirerate.SetText($"fireRate- {targetTowerStats.fireRate}");
 
-        Transform child = target.transform.Find("Range");
-        if ( child == null )
-        {
-            Debug.Log("notfound");
-        }
-        //Transform granchild = child.transform.Find("Range")
-
-        if (target.GetComponentInChildren<GameObject>().CompareTag("Range"))
-        {
-            
-        }
-
+        Transform child = target.transform.GetChild(0);
+        grandchild = child.transform.GetChild(1);
+        grandchild.gameObject.SetActive(true);
     }
     public void HideUI()
     {
         ui.SetActive(false);
         towerStats.SetActive(false);
+        if (grandchild != null)
+                grandchild.gameObject.SetActive(false);
     }
     public void Upgrade()
     {
@@ -66,7 +60,6 @@ public class TowerUprgades : MonoBehaviour
             }
             Debug.Log("not enough gold");
         }
-        
     }
 
     public void sell()
