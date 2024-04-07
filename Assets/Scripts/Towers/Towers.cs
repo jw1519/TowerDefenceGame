@@ -14,7 +14,6 @@ public class Towers : MonoBehaviour
     [Header("Tower Hover Elements")]
     public Material hoverColor;
     public Material OriginalMaterial;
-    private Renderer rend;
 
     public bool ShowRange = true;
     
@@ -33,7 +32,6 @@ public class Towers : MonoBehaviour
     private void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
-        rend = GetComponent<Renderer>();
     }
     //finding enemy and seeing the distance, targeting system
     void UpdateTarget()

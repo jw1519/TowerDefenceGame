@@ -1,10 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TowerUprgades : MonoBehaviour
 {
     public GameObject ui;
+    public GameObject towerStats;
+    public TextMeshProUGUI towerPower;
+    public TextMeshProUGUI towerRange;
+    public TextMeshProUGUI towerFirerate;
+
     public static TowerUprgades instance;
 
     private void Awake()
@@ -12,6 +18,8 @@ public class TowerUprgades : MonoBehaviour
         instance = this;
     }
     private PlaceableTile targetTile;
+    private Towers targetTowerStats;
+    private string TowerName;
 
     public void SetTarget(PlaceableTile target)
     {
@@ -20,10 +28,17 @@ public class TowerUprgades : MonoBehaviour
         transform.position = target.transform.position;
 
         ui.SetActive(true);
+        towerStats.SetActive(true);
+        targetTowerStats = target.GetComponentInChildren<Towers>();
+        towerPower.SetText($"Power- {targetTowerStats.Damage}");
+        towerRange.SetText($"Range- {targetTowerStats.Range}");
+        towerFirerate.SetText($"fireRate- {targetTowerStats.fireRate}");
+
     }
     public void HideUI()
     {
         ui.SetActive(false);
+        towerStats.SetActive(false);
     }
     public void Upgrade()
     {
