@@ -19,6 +19,7 @@ TagManager:
   - Dragon
   - Knight
   - EnemiesParent
+  - Range
   layers:
   - Default
   - TransparentFX

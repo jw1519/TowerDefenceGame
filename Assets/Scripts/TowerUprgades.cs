@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TowerUprgades : MonoBehaviour
@@ -21,6 +22,7 @@ public class TowerUprgades : MonoBehaviour
     private Towers targetTowerStats;
     private string TowerName;
 
+
     public void SetTarget(PlaceableTile target)
     {
         targetTile = target;
@@ -33,6 +35,18 @@ public class TowerUprgades : MonoBehaviour
         towerPower.SetText($"Power- {targetTowerStats.Damage}");
         towerRange.SetText($"Range- {targetTowerStats.Range}");
         towerFirerate.SetText($"fireRate- {targetTowerStats.fireRate}");
+
+        Transform child = target.transform.Find("Range");
+        if ( child == null )
+        {
+            Debug.Log("notfound");
+        }
+        //Transform granchild = child.transform.Find("Range")
+
+        if (target.GetComponentInChildren<GameObject>().CompareTag("Range"))
+        {
+            
+        }
 
     }
     public void HideUI()

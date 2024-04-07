@@ -31,6 +31,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4060121456763473105}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4381883664338354521
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4060121456763473105}
+    m_Modifications:
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485069806422529058, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_Name
+      value: Range
+      objectReference: {fileID: 0}
+    - target: {fileID: 4485069806422529058, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+--- !u!4 &1506025919140297640 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2894100842260658929, guid: 5d8b8af0db9762d4e88cb18da102c40a, type: 3}
+  m_PrefabInstance: {fileID: 4381883664338354521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4598961960546560826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105,6 +179,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a41eea55d3ad614409fded315d8a589c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4198575105530500204}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a41eea55d3ad614409fded315d8a589c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1506025919140297640}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a41eea55d3ad614409fded315d8a589c, type: 3}
       insertIndex: -1
@@ -134,6 +211,7 @@ MonoBehaviour:
   ShootSound: {fileID: 8566469137720777640}
   hoverColor: {fileID: 2100000, guid: 6fbcc4243a9a5cc4780ccae01533ca38, type: 2}
   OriginalMaterial: {fileID: -5682177726514902387, guid: a41eea55d3ad614409fded315d8a589c, type: 3}
+  ShowRange: 1
   Range: 50
   fireRate: 1
   Damage: 3
