@@ -1,11 +1,6 @@
-using JetBrains.Annotations;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using TMPro;
-using UnityEngine.UI;
-using UnityEngine.Pool;
 
 public class EnemyNavigation : MonoBehaviour
 {

@@ -33,18 +33,22 @@ public class ButtonManager : MonoBehaviour
         foreach (Transform child in children)
         {
             NavMeshAgent navMeshAgent = child.GetComponent<NavMeshAgent>();  
+            Animator animator = child.GetComponent<Animator>();
             if (navMeshAgent != null)
             {
                 navMeshAgent.enabled = false;
+                animator.enabled = false;
             }
         }
         yield return new WaitForSeconds(10f);
         foreach (Transform child in children)
         {
             NavMeshAgent navMeshAgent = child.GetComponent<NavMeshAgent>();
+            Animator animator = child.GetComponent<Animator>();
             if (navMeshAgent != null)
             {
                 navMeshAgent.enabled = true;
+                animator.enabled = true;
 
                 EnemyNavigation NavigationScript = child.GetComponent<EnemyNavigation>();
                 navMeshAgent.SetDestination(NavigationScript.navMeshDestination);
