@@ -136,6 +136,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: -1594015730887339857, guid: 57188ed5868f11c4fa96b46c325d0d2d, type: 3}
+      propertyPath: m_TagString
+      value: Material
+      objectReference: {fileID: 0}
     - target: {fileID: -667351837366698983, guid: 57188ed5868f11c4fa96b46c325d0d2d, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -341,6 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35bc5cd887045ac46b9748269ef228df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  navMeshDestination: {x: 0, y: 0, z: 0}
   enemy: {fileID: 4340035333577336964}
   animator: {fileID: 3406568323332555371}
   endLocation: {fileID: 2842896172872473625, guid: 8ec084229c3a2664ebaccbca83aafc1e, type: 3}
