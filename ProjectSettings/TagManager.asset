@@ -20,6 +20,7 @@ TagManager:
   - Knight
   - EnemiesParent
   - Range
+  - Material
   layers:
   - Default
   - TransparentFX
